@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/app/static/css/main.3cd9c00e.chunk.css",
+    "main.js": "/app/static/js/main.a911d784.chunk.js",
+    "main.js.map": "/app/static/js/main.a911d784.chunk.js.map",
+    "runtime-main.js": "/app/static/js/runtime-main.ae619976.js",
+    "runtime-main.js.map": "/app/static/js/runtime-main.ae619976.js.map",
+    "static/js/2.4d3eb59c.chunk.js": "/app/static/js/2.4d3eb59c.chunk.js",
+    "static/js/2.4d3eb59c.chunk.js.map": "/app/static/js/2.4d3eb59c.chunk.js.map",
+    "static/css/3.f01de962.chunk.css": "/app/static/css/3.f01de962.chunk.css",
+    "static/js/3.5292cbed.chunk.js": "/app/static/js/3.5292cbed.chunk.js",
+    "static/js/3.5292cbed.chunk.js.map": "/app/static/js/3.5292cbed.chunk.js.map",
+    "static/css/4.c8ea90b0.chunk.css": "/app/static/css/4.c8ea90b0.chunk.css",
+    "static/js/4.bd65c9da.chunk.js": "/app/static/js/4.bd65c9da.chunk.js",
+    "static/js/4.bd65c9da.chunk.js.map": "/app/static/js/4.bd65c9da.chunk.js.map",
+    "index.html": "/app/index.html",
+    "static/css/3.f01de962.chunk.css.map": "/app/static/css/3.f01de962.chunk.css.map",
+    "static/css/4.c8ea90b0.chunk.css.map": "/app/static/css/4.c8ea90b0.chunk.css.map",
+    "static/css/main.3cd9c00e.chunk.css.map": "/app/static/css/main.3cd9c00e.chunk.css.map",
+    "static/js/2.4d3eb59c.chunk.js.LICENSE.txt": "/app/static/js/2.4d3eb59c.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/app/static/media/Montserrat-Regular.3cd78665.ttf",
+    "static/media/contactMailDark.svg": "/app/static/media/contactMailDark.1db650d3.svg",
+    "static/media/cpLogo.png": "/app/static/media/cpLogo.f4296945.png",
+    "static/media/developerActivity.svg": "/app/static/media/developerActivity.2c0445ca.svg",
+    "static/media/harvardLogo.png": "/app/static/media/harvardLogo.542dab89.png",
+    "static/media/manOnTable.svg": "/app/static/media/manOnTable.8f117eb2.svg",
+    "static/media/nextuLogo.webp": "/app/static/media/nextuLogo.e033dbfa.webp",
+    "static/media/saayaHealthLogo.webp": "/app/static/media/saayaHealthLogo.60b27d1f.webp",
+    "static/media/skill.svg": "/app/static/media/skill.35a14766.svg",
+    "static/media/TalkCard.css": "/app/static/media/talksCardBack.73ed1545.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ae619976.js",
+    "static/js/2.4d3eb59c.chunk.js",
+    "static/css/main.3cd9c00e.chunk.css",
+    "static/js/main.a911d784.chunk.js"
+  ]
+}
