@@ -30,7 +30,6 @@ export default function ExperienceCard({cardInfo, isDark}) {
       : null;
   };
 
-  const img = cardInfo.companylogo;
   return (
     <div className={isDark ? "experience-card-dark" : "experience-card"}>
       <div style={{background: rgb(colorArrays)}} className="experience-banner">

@@ -102,13 +102,12 @@ https://fontawesome.com/icons?d=gallery */
 };
 
 // Education Section
-
 const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
       schoolName: "California State University Sacramento",
-      logo: require("./assets/images/harvardLogo.png"),
+      logo: require("./assets/images/sacstate.png").default,
       subHeader: "Bachelor of Science in Computer Science",
       duration: "2008 - 2012",
       desc: "Senior Project",
@@ -156,7 +155,7 @@ const workExperiences = {
     {
       role: "Software Engineer",
       company: "Alta Vista Solutions",
-      companylogo: require("./assets/images/cpLogo.png"),
+      companylogo: require("./assets/images/avs.jpg").default,
       date: "May 2016 – Present",
       desc:
         "Experienced with Yii2 Framework and built application mainly in PHP and JavaScript language. Worked on many small projects in different languages such as Python, C++ and Visual basic",
@@ -172,7 +171,7 @@ const workExperiences = {
     {
       role: "Quality Assurance Engineer",
       company: "Dorado Software",
-      companylogo: require("./assets/images/ersteLogo.jpg"),
+      companylogo: require("./assets/images/dorado.jpg").default,
       date: "Aug 2012 – Apr 2016",
       desc:
         "Quality Assurance testing for network management software that manage network routers and switches",
@@ -188,14 +187,6 @@ const workExperiences = {
         "Mirantis Fuel OpenStack deployment - manage and deployed virtualized cloud lab environment"
       ]
     },
-    // {
-    //   role: "Junior Information Security & Systems Representative",
-    //   company: "Vodafone",
-    //   companylogo: require("./assets/images/vodafoneLogo.png"),
-    //   date: "November 2018 – July 2019",
-    //   desc:
-    //     "I've conducted internal audit making sure the organization is compliant with the GDPR."
-    // }
   ]
 };
 
@@ -204,7 +195,7 @@ To know how to get github key look at readme.md */
 
 const openSource = {
   githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
-  githubUserName: "drakosi99", // Change to your github username to view your profile in Contact Section.
+  githubUserName: "greentea524", // Change to your github username to view your profile in Contact Section.
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
   display: false // Set false to hide this section, defaults to true
 };
