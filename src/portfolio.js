@@ -43,6 +43,12 @@ const skillsSection = {
     emoji(
       "⚡ Develop interactive Front end / User Interfaces for your web and mobile applications"
     ),
+    emoji(
+      "⚡ Develop applications with Yii2 framework and worked with MySQL Databases"
+    ),
+    emoji(
+      "⚡ Develop executables and scripts using Python, C++, Visual basic"
+    ),
     // emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
     // emoji(
     //   "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
@@ -69,10 +75,10 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "css3",
       fontAwesomeClassname: "fab fa-css3-alt"
     },
-    {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
+    // {
+    //   skillName: "sass",
+    //   fontAwesomeClassname: "fab fa-sass"
+    // },
     {
       skillName: "reactjs",
       fontAwesomeClassname: "fab fa-react"
@@ -81,10 +87,10 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "nodejs",
       fontAwesomeClassname: "fab fa-node"
     },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
+    // {
+    //   skillName: "swift",
+    //   fontAwesomeClassname: "fab fa-swift"
+    // },
     {
       skillName: "npm",
       fontAwesomeClassname: "fab fa-npm"
@@ -112,7 +118,10 @@ const educationInfo = {
       duration: "2008 - 2012",
       desc: "Senior Project",
       descBullets: [
-        "Worked in a team of five to enhance a newsletter system, CiciNews, for Senior Project. Our sponsor was a Director of the Career Services Office for the Engineering and Computer Science Department. CiciNews provides the sponsor the ability to publish weekly or urgent newsletters about job opportunities and articles to subscribers. Learned to utilize Linux, Apache, MySQL, and Php environment to adapt to the school's system."
+        "Worked in a team of five to enhance a newsletter system, CiciNews, for Senior Project.",
+        " Our sponsor was a Director of the Career Services Office for the Engineering and Computer Science Department.",
+        " CiciNews provides the sponsor the ability to publish weekly or urgent newsletters about job opportunities and articles to subscribers.",
+        " Learned to utilize Linux, Apache, MySQL, and Php environment to adapt to the school's system."
       ]
     },
     // {
@@ -336,14 +345,14 @@ const contactInfo = {
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
   // number: "(323) 768 0674",
-  email_address: "davidphong524@gmail.com"
+  email_address: "cpdawei@gmail.com"
 };
 
 // Twitter Section
 
 const twitterDetails = {
   userName: "davidphong_", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
 export {
