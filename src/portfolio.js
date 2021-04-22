@@ -12,7 +12,7 @@ const greeting = {
   username: "David Phong",
   title: "Hi all, I'm David",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of designing and building Web applications with JavaScript / Reactjs / Nodejs and some other cool libraries and frameworks."
+    "A passionate Full Stack Software Developer 🚀 having an experience of designing and building Web applications with JavaScript / Reactjs and some other cool libraries and frameworks."
   ),
   // resumeLink:
   //   "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing",
@@ -38,8 +38,11 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "FULL STACK DEVELOPER WHO LOVES TO SOLVE PROBLEMS",
   skills: [
+    emoji(
+      "⚡ Over 5 years of experience in software development, 3 years in quality assurance"
+    ),
     emoji(
       "⚡ Develop interactive Front end / User Interfaces for your web and mobile applications"
     ),
@@ -174,7 +177,8 @@ const workExperiences = {
         "Responsible for frontend and backend work.",
         "Worked with development team in an agile environment",
         "Use GSOAP library to create executable script and send data from Instron Bluehill software to Material Test Data application",
-        "Use SQL Server Management Studio environment to work with Deltek Vision database for project reports."
+        "Use SQL Server Management Studio environment to work with Deltek Vision database for project reports.",
+        "Experienced with IT helping internally for about a year."
       ]
     },
     {
@@ -345,7 +349,7 @@ const contactInfo = {
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
   // number: "(323) 768 0674",
-  email_address: "cpdawei@gmail.com"
+  email_address: "drinkyourtea@yahoo.com"
 };
 
 // Twitter Section
