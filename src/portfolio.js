@@ -41,7 +41,7 @@ const skillsSection = {
   subTitle: "FULL STACK DEVELOPER WHO LOVES TO SOLVE PROBLEMS",
   skills: [
     emoji(
-      "⚡ Over 5 years of experience in software development, 3 years in quality assurance"
+      "⚡ Over 6 years of experience in software development, 3 years in quality assurance"
     ),
     emoji(
       "⚡ Develop interactive Front end / User Interfaces for your web and mobile applications"
@@ -166,7 +166,7 @@ const workExperiences = {
   experience: [
     {
       role: "Software Engineer",
-      company: "Alta Vista Solutions",
+      company: "Alta Vista Solutions (OneAtlas in 2020)",
       companylogo: require("./assets/images/avs.jpg").default,
       date: "May 2016 – Present",
       desc:
@@ -176,7 +176,7 @@ const workExperiences = {
         "Worked on Job Mix Formula (JMF) application to gather data from materials testing database to perform data verification, data calculation, hard copy forms into digital, and approval process",
         "Responsible for frontend and backend work.",
         "Worked with development team in an agile environment",
-        "Use GSOAP library to create executable script and send data from Instron Bluehill software to Material Test Data application",
+        "Use gSOAP library to create executable script and send data from Instron Bluehill software to Material Test Data application",
         "Use SQL Server Management Studio environment to work with Deltek Vision database for project reports.",
         "Experienced with IT helping internally for about a year."
       ]
@@ -345,11 +345,11 @@ const podcastSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me"),
+  title: emoji("Contact"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
   // number: "(323) 768 0674",
-  email_address: "drinkyourtea@yahoo.com"
+  // email_address: "drinkyourtea@yahoo.com"
 };
 
 // Twitter Section
