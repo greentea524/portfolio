@@ -11,9 +11,7 @@ const illustration = {
 const greeting = {
   username: "David Phong",
   title: "Hi all, I'm David",
-  subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of designing and building Web applications with JavaScript / Reactjs and some other cool libraries and frameworks."
-  ),
+  subTitle: "A passionate Full Stack Software Developer having an experience of designing and building Web applications with JavaScript / Reactjs and some other cool libraries and frameworks.",
   // resumeLink:
   //   "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing",
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -35,23 +33,16 @@ const socialMediaLinks = {
 };
 
 // Skills Section
+var devExperience = new Date().getFullYear() - 2016;
 
 const skillsSection = {
   title: "What I do",
   subTitle: "FULL STACK DEVELOPER WHO LOVES TO SOLVE PROBLEMS",
   skills: [
-    emoji(
-      "⚡ Over 6 years of experience in software development, 3 years in quality assurance"
-    ),
-    emoji(
-      "⚡ Develop interactive Front end / User Interfaces for your web and mobile applications"
-    ),
-    emoji(
-      "⚡ Develop applications with Yii2 framework and worked with MySQL Databases"
-    ),
-    emoji(
-      "⚡ Develop executables and scripts using Python, C++, Visual basic"
-    ),
+    "⚡" + devExperience + " years of experience in software development, 3 years in quality assurance",
+    "⚡ Develop interactive Front end / User Interfaces for your web and mobile applications",
+    "⚡ Develop applications with Yii2 framework and worked with MySQL Databases",
+    "⚡ Develop executables and scripts using Python, C++, Visual basic",
     // emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
     // emoji(
     //   "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
@@ -250,7 +241,7 @@ const bigProjects = {
 // Include certificates, talks etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: "Achievements And Certifications 🏆 ",
   subtitle:
     "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
 
