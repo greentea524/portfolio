@@ -3,6 +3,15 @@
 // Summary And Greeting Section
 
 import emoji from "react-easy-emoji";
+import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+
+// Splash Screen
+
+const splashScreen = {
+  enabled: true, // set false to disable splash screen
+  animation: splashAnimation,
+  duration: 2000 // Set animation duration as per your animation
+};
 
 const illustration = {
   animated: true // set to false to use static SVG
@@ -35,13 +44,13 @@ const socialMediaLinks = {
 };
 
 // Skills Section
-
+var devExperience = new Date().getFullYear() - 2016;
 const skillsSection = {
   title: "What I do",
   subTitle: "FULL STACK DEVELOPER WHO LOVES TO SOLVE PROBLEMS",
   skills: [
     emoji(
-      "⚡ Over 6 years of experience in software development, 3 years in quality assurance"
+      "⚡ " + devExperience + " years of experience in software development, 3 years in quality assurance"
     ),
     emoji(
       "⚡ Develop interactive Front end / User Interfaces for your web and mobile applications"
@@ -116,7 +125,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "California State University Sacramento",
-      logo: require("./assets/images/sacstate.png").default,
+      logo: require("./assets/images/sacstate.png"),
       subHeader: "Bachelor of Science in Computer Science",
       duration: "2008 - 2012",
       desc: "Senior Project",
@@ -167,7 +176,7 @@ const workExperiences = {
     {
       role: "Software Engineer",
       company: "Alta Vista Solutions (OneAtlas in 2020)",
-      companylogo: require("./assets/images/avs.jpg").default,
+      companylogo: require("./assets/images/avs.jpg"),
       date: "May 2016 – Present",
       desc:
         "Experienced with Yii2 Framework and built application mainly in PHP and JavaScript language. Worked on many small projects in different languages such as Python, C++ and Visual basic",
@@ -184,7 +193,7 @@ const workExperiences = {
     {
       role: "Quality Assurance Engineer",
       company: "Dorado Software",
-      companylogo: require("./assets/images/dorado.jpg").default,
+      companylogo: require("./assets/images/dorado.jpg"),
       date: "Aug 2012 – Apr 2016",
       desc:
         "Quality Assurance testing for network management software that manage network routers and switches",
@@ -258,7 +267,7 @@ const achievementSection = {
     {
       title: "Python Data Structures",
       subtitle: "Coursera",
-      // image: require("./assets/images/pwaLogo.webp"),
+      image: require("./assets/images/coursera.png"),
       footerLink: [
         {name: "Certification", url: "https://www.coursera.org/account/accomplishments/verify/XEZ93TVXXBJT"},
         // {
@@ -270,7 +279,7 @@ const achievementSection = {
     {
       title: "Front-end Web Development with React",
       subtitle: "Coursera",
-      // image: require("./assets/images/pwaLogo.webp"),
+      image: require("./assets/images/coursera.png"),
       footerLink: [
         {name: "Certification", url: "https://www.coursera.org/account/accomplishments/verify/AX5EG3TKNVAT"},
       ]
@@ -278,7 +287,7 @@ const achievementSection = {
     {
       title: "System Administration and IT Infrastructure Services",
       subtitle: "Coursera",
-      // image: require("./assets/images/pwaLogo.webp"),
+      image: require("./assets/images/coursera.png"),
       footerLink: [
         {name: "Certification", url: "https://www.coursera.org/account/accomplishments/verify/UFB5ADGEH7HN"},
       ]
@@ -359,10 +368,14 @@ const twitterDetails = {
   display: false // Set true to display this section, defaults to false
 };
 
+const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+
+
 export {
   illustration,
   greeting,
   socialMediaLinks,
+  splashScreen,
   skillsSection,
   educationInfo,
   techStack,
@@ -374,5 +387,6 @@ export {
   talkSection,
   podcastSection,
   contactInfo,
-  twitterDetails
+  twitterDetails,
+  isHireable
 };

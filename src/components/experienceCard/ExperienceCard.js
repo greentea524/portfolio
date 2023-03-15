@@ -1,5 +1,5 @@
 import React, {useState, createRef} from "react";
-import "./ExperienceCard.css";
+import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
 
 export default function ExperienceCard({cardInfo, isDark}) {
@@ -37,6 +37,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
         <div className="experience-div-company">
           <h5 className="experience-text-company">{cardInfo.company}</h5>
         </div>
+
         <img
           crossOrigin={"anonymous"}
           ref={imgRef}
