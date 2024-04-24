@@ -182,7 +182,7 @@ const workExperiences = {
       descBullets: [
         "Worked on a web application project that allows data storage of materials testing and reporting for the California Department of Transportation - Material Engineering and Testing Services (METS) lab",
         "Worked on Job Mix Formula (JMF) application to gather data from materials testing database to perform data verification, data calculation, hard copy forms into digital, and approval process",
-        "Rewrote a project from C to C++ to compile to an executable script which sends test data from Instron Bluehill Universal test machine to Material Test Data application",
+        "Rewrote a C project into C++ to compile an executable script to send test data from Instron Bluehill Universal test machine to store in a test result database.",
         "Update, resolve, and troubleshoot applications for several client applications - PHP5 to PHP8",
         "Design the user interface for combined aggregate gradation report - integrating gradation results and standard specifications",
         "Assist with developing and testing for client's API system that connects several of client's databases.",
