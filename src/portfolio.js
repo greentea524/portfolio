@@ -10,11 +10,11 @@ import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your
 const splashScreen = {
   enabled: true, // set false to disable splash screen
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 2000, // Set animation duration as per your animation
 };
 
 const illustration = {
-  animated: true // set to false to use static SVG
+  animated: true, // set to false to use static SVG
 };
 
 const greeting = {
@@ -25,7 +25,7 @@ const greeting = {
   ),
   // resumeLink:
   //   "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing",
-  displayGreeting: true // Set false to hide this section, defaults to true
+  displayGreeting: true, // Set false to hide this section, defaults to true
 };
 
 // Social Media Links
@@ -39,8 +39,8 @@ const socialMediaLinks = {
   // medium: "https://medium.com/@davidrakosi",
   // stackoverflow: "https://stackoverflow.com/users/13263979/drakosi",
   // instagram: 'https://www.instagram.com/davidrakosi/',
-  twitter: 'https://twitter.com/davidphong_',
-  display: true // Set true to display this section, defaults to false
+  twitter: "https://twitter.com/davidphong_",
+  display: true, // Set true to display this section, defaults to false
 };
 
 // Skills Section
@@ -50,7 +50,9 @@ const skillsSection = {
   subTitle: "FULL STACK DEVELOPER WHO LOVES TO SOLVE PROBLEMS",
   skills: [
     emoji(
-      "⚡ " + devExperience + " years of experience in software development, 3 years in quality assurance"
+      "⚡ " +
+        devExperience +
+        " years of experience in software development, 3 years in quality assurance"
     ),
     emoji(
       "⚡ Develop interactive Front end / User Interfaces for your web and mobile applications"
@@ -58,9 +60,7 @@ const skillsSection = {
     emoji(
       "⚡ Develop applications with Yii2 framework and worked with MySQL Databases"
     ),
-    emoji(
-      "⚡ Develop executables and scripts using Python, C++, Visual basic"
-    ),
+    emoji("⚡ Develop executables and scripts using Python, C++, Visual basic"),
     // emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
     // emoji(
     //   "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
@@ -73,19 +73,19 @@ https://fontawesome.com/icons?d=gallery */
   softwareSkills: [
     {
       skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
+      fontAwesomeClassname: "fab fa-js",
     },
     {
       skillName: "Php",
-      fontAwesomeClassname: "fab fa-php"
+      fontAwesomeClassname: "fab fa-php",
     },
     {
       skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      fontAwesomeClassname: "fab fa-html5",
     },
     {
       skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      fontAwesomeClassname: "fab fa-css3-alt",
     },
     // {
     //   skillName: "sass",
@@ -93,11 +93,11 @@ https://fontawesome.com/icons?d=gallery */
     // },
     {
       skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
+      fontAwesomeClassname: "fab fa-react",
     },
     {
       skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
+      fontAwesomeClassname: "fab fa-node",
     },
     // {
     //   skillName: "swift",
@@ -105,18 +105,18 @@ https://fontawesome.com/icons?d=gallery */
     // },
     {
       skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      fontAwesomeClassname: "fab fa-npm",
     },
     {
       skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
+      fontAwesomeClassname: "fas fa-database",
     },
     {
       skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    }
+      fontAwesomeClassname: "fas fa-fire",
+    },
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true, // Set false to hide this section, defaults to true
 };
 
 // Education Section
@@ -133,8 +133,8 @@ const educationInfo = {
         "Worked in a team of five to enhance a newsletter system, CiciNews, for Senior Project.",
         " Our sponsor was a Director of the Career Services Office for the Engineering and Computer Science Department.",
         " CiciNews provides the sponsor the ability to publish weekly or urgent newsletters about job opportunities and articles to subscribers.",
-        " Learned to utilize Linux, Apache, MySQL, and Php environment to adapt to the school's system."
-      ]
+        " Learned to utilize Linux, Apache, MySQL, and Php environment to adapt to the school's system.",
+      ],
     },
     // {
     //   schoolName: "Stanford University",
@@ -145,7 +145,7 @@ const educationInfo = {
     //     "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
     //   descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     // }
-  ]
+  ],
 };
 
 // Your top 3 proficient stacks/tech experience
@@ -155,18 +155,18 @@ const techStack = {
   experience: [
     {
       Stack: "Frontend / Design", //Insert stack or technology you have experience in
-      progressPercentage: "70%" //Insert relative proficiency in percentage
+      progressPercentage: "70%", //Insert relative proficiency in percentage
     },
     {
       Stack: "Backend",
-      progressPercentage: "60%"
+      progressPercentage: "60%",
     },
     {
       Stack: "Programming",
-      progressPercentage: "80%"
-    }
+      progressPercentage: "80%",
+    },
   ],
-  displayCodersrank: true // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: true, // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
 
 // Work experience section
@@ -178,25 +178,26 @@ const workExperiences = {
       company: "Alta Vista Solutions (OneAtlas in 2020)",
       companylogo: require("./assets/images/avs.jpg"),
       date: "May 2016 – Present",
-      desc:
-        "Experienced with Yii2 Framework and built application mainly in PHP and JavaScript language. Worked on many small projects in different languages such as Python, C++ and Visual basic",
+      desc: "Experienced with Yii2 Framework and built application mainly in PHP and JavaScript language. Worked on many small projects in different languages such as Python, C++ and Visual basic",
       descBullets: [
         "Worked on a web application project that allows data storage of materials testing and reporting for the California Department of Transportation - Material Engineering and Testing Services (METS) lab",
         "Worked on Job Mix Formula (JMF) application to gather data from materials testing database to perform data verification, data calculation, hard copy forms into digital, and approval process",
+        "Rewrote a project from C to C++ to compile to an executable script which sends test data from Instron Bluehill Universal test machine to Material Test Data application",
+        "Update, resolve, and troubleshoot applications for several client applications - PHP5 to PHP8",
+        "Design the user interface for combined aggregate gradation report - integrating gradation results and standard specifications",
+        "Assist with developing and testing for client's API system that connects several of client's databases.",
         "Responsible for frontend and backend work.",
         "Worked with development team in an agile environment",
-        "Use gSOAP library to create executable script and send data from Instron Bluehill software to Material Test Data application",
         "Use SQL Server Management Studio environment to work with Deltek Vision database for project reports.",
-        "Experienced with IT helping internally for about a year."
-      ]
+        "Experienced with IT helping internally for about a year.",
+      ],
     },
     {
       role: "Quality Assurance Engineer",
       company: "Dorado Software",
       companylogo: require("./assets/images/dorado.jpg"),
       date: "Aug 2012 – Apr 2016",
-      desc:
-        "Quality Assurance testing for network management software that manage network routers and switches",
+      desc: "Quality Assurance testing for network management software that manage network routers and switches",
       descBullets: [
         "Software application and web server installation in Windows and Linux OS VMWare environment",
         "Worked with database MySQL and Oracle.",
@@ -206,10 +207,10 @@ const workExperiences = {
         "Made changes to the software installer - InstallAnywhere",
         "Automation testing with Selenium",
         "Managed ESXI vmware environment",
-        "Mirantis Fuel OpenStack deployment - manage and deployed virtualized cloud lab environment"
-      ]
+        "Mirantis Fuel OpenStack deployment - manage and deployed virtualized cloud lab environment",
+      ],
     },
-  ]
+  ],
 };
 
 /* Your Open Source Section to View Your Github Pinned Projects
@@ -219,7 +220,7 @@ const openSource = {
   githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
   githubUserName: "greentea524", // Change to your github username to view your profile in Contact Section.
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: false // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 // Some big projects you have worked on
@@ -235,10 +236,10 @@ const bigProjects = {
       footerLink: [
         {
           name: "Visit Website",
-          url: "fa"
-        }
+          url: "fa",
+        },
         //  you can add extra buttons here.
-      ]
+      ],
     },
     {
       image: require("./assets/images/nextuLogo.webp"),
@@ -247,12 +248,12 @@ const bigProjects = {
       footerLink: [
         {
           name: "Visit Website",
-          url: ""
-        }
-      ]
-    }
+          url: "",
+        },
+      ],
+    },
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
@@ -269,31 +270,68 @@ const achievementSection = {
       subtitle: "Coursera",
       image: require("./assets/images/coursera.png"),
       footerLink: [
-        {name: "Certification", url: "https://www.coursera.org/account/accomplishments/verify/XEZ93TVXXBJT"},
+        {
+          name: "Certification",
+          url: "https://www.coursera.org/account/accomplishments/verify/XEZ93TVXXBJT",
+        },
         // {
         //   name: "Final Project",
         //   url: ""
         // },
-      ]
+      ],
     },
     {
       title: "Front-end Web Development with React",
       subtitle: "Coursera",
       image: require("./assets/images/coursera.png"),
       footerLink: [
-        {name: "Certification", url: "https://www.coursera.org/account/accomplishments/verify/AX5EG3TKNVAT"},
-      ]
+        {
+          name: "Certification",
+          url: "https://www.coursera.org/account/accomplishments/verify/AX5EG3TKNVAT",
+        },
+      ],
     },
     {
       title: "System Administration and IT Infrastructure Services",
       subtitle: "Coursera",
       image: require("./assets/images/coursera.png"),
       footerLink: [
-        {name: "Certification", url: "https://www.coursera.org/account/accomplishments/verify/UFB5ADGEH7HN"},
-      ]
-    }
+        {
+          name: "Certification",
+          url: "https://www.coursera.org/account/accomplishments/verify/UFB5ADGEH7HN",
+        },
+      ],
+    },
+    {
+      title: "Management Skills for New Managers",
+      subtitle: "American Management Association",
+      image: require("./assets/images/ama.png"),
+      footerLink: [],
+    },
+    {
+      title: "Jenkins, From Zero To Hero: Become a DevOps Jenkins Master",
+      subtitle: "Udemy",
+      image: require("./assets/images/udemy-v2.png"),
+      footerLink: [
+        {
+          name: "Certification",
+          url: "https://www.udemy.com/certificate/UC-c21f5ddc-663e-4131-a621-0d3c96a3aa84/",
+        },
+      ],
+    },
+    {
+      title: "Postman: The Complete Guide - REST API Testing",
+      subtitle: "Udemy",
+      image: require("./assets/images/udemy-v2.png"),
+      footerLink: [
+        {
+          name: "In Progress",
+          url: "#",
+        },
+      ],
+    },
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true, // Set false to hide this section, defaults to true
 };
 
 // Blogs Section
@@ -305,39 +343,36 @@ const blogSection = {
 
   blogs: [
     {
-      url:
-        "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
+      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
       title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
       description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
+        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?",
     },
     {
       url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
       title: "Why REACT is The Best?",
       description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
+        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.",
+    },
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
 
 const talkSection = {
   title: "TALKS",
-  subtitle: emoji(
-    ""
-  ),
+  subtitle: emoji(""),
 
   talks: [
     {
       title: "",
       subtitle: "",
       slides_url: "",
-      event_url: ""
-    }
+      event_url: "",
+    },
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -347,10 +382,8 @@ const podcastSection = {
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
 
   // Please Provide with Your Podcast embeded Link
-  podcast: [
-    ""
-  ],
-  display: false // Set false to hide this section, defaults to true
+  podcast: [""],
+  display: false, // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
@@ -365,11 +398,10 @@ const contactInfo = {
 
 const twitterDetails = {
   userName: "davidphong_", //Replace "twitter" with your twitter username without @
-  display: false // Set true to display this section, defaults to false
+  display: false, // Set true to display this section, defaults to false
 };
 
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
-
 
 export {
   illustration,
@@ -388,5 +420,5 @@ export {
   podcastSection,
   contactInfo,
   twitterDetails,
-  isHireable
+  isHireable,
 };
