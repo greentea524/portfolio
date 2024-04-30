@@ -1,5 +1,3 @@
-﻿/* Change this file to get your personal Portfolio */
-
 // Summary And Greeting Section
 
 import emoji from "react-easy-emoji";
@@ -325,8 +323,8 @@ const achievementSection = {
       image: require("./assets/images/udemy-v2.png"),
       footerLink: [
         {
-          name: "In Progress",
-          url: "#",
+          name: "Certification",
+          url: "https://www.udemy.com/certificate/UC-b8cb71b9-5bb4-4bff-ab51-36f40be2e5f7/",
         },
       ],
     },
