@@ -173,10 +173,10 @@ const workExperiences = {
   experience: [
     {
       role: "Software Engineer",
-      company: "Alta Vista Solutions (OneAtlas in 2020)",
+      company: "Atlas Technical Consultants",
       companylogo: require("./assets/images/avs.jpg"),
       date: "May 2016 – Present",
-      desc: "Experienced with Yii2 Framework and built application mainly in PHP and JavaScript language. Worked on many small projects in different languages such as Python, C++ and Visual basic",
+      desc: "Atlas Technical Consultants (Acquired Alta Vista Solutions in 2020). Experienced with Yii2 Framework and built application mainly in PHP and JavaScript language. Worked on many small projects in different languages such as Python, C++ and Visual basic",
       descBullets: [
         "Worked on a web application project that allows data storage of materials testing and reporting for the California Department of Transportation - Material Engineering and Testing Services (METS) lab",
         "Worked on Job Mix Formula (JMF) application to gather data from materials testing database to perform data verification, data calculation, hard copy forms into digital, and approval process",
@@ -325,6 +325,17 @@ const achievementSection = {
         {
           name: "Certification",
           url: "https://www.udemy.com/certificate/UC-b8cb71b9-5bb4-4bff-ab51-36f40be2e5f7/",
+        },
+      ],
+    },
+    {
+      title: "Google AI Essentials",
+      subtitle: "Coursera",
+      image: require("./assets/images/coursera.png"),
+      footerLink: [
+        {
+          name: "Certification",
+          url: "https://www.coursera.org/account/accomplishments/verify/6O8ZH4XK2R7L",
         },
       ],
     },
