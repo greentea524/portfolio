@@ -339,6 +339,17 @@ const achievementSection = {
         },
       ],
     },
+    {
+      title: "Fundamentals of Project Planning and Management",
+      subtitle: "Coursera",
+      image: require("./assets/images/coursera.png"),
+      footerLink: [
+        {
+          name: "Certification",
+          url: "https://www.coursera.org/account/accomplishments/verify/C3S8J5LDWUJY",
+        },
+      ],
+    },
   ],
   display: true, // Set false to hide this section, defaults to true
 };
