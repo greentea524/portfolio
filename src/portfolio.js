@@ -176,7 +176,7 @@ const workExperiences = {
       company: "Atlas Technical Consultants",
       companylogo: require("./assets/images/avs.jpg"),
       date: "May 2016 – Present",
-      desc: "Atlas Technical Consultants (Acquired Alta Vista Solutions in 2020). Experienced with Yii2 Framework and built application mainly in PHP and JavaScript language. Worked on many small projects in different languages such as Python, C++ and Visual basic",
+      desc: "Atlas Technical Consultants (Acquired Alta Vista Solutions in 2020). Experienced with Yii2 and Laravel frameworks and built application mainly in PHP and JavaScript language. Worked on many small projects in different languages such as React, Python, C++ and Visual basic",
       descBullets: [
         "Worked on a web application project that allows data storage of materials testing and reporting for the California Department of Transportation - Material Engineering and Testing Services (METS) lab",
         "Worked on Job Mix Formula (JMF) application to gather data from materials testing database to perform data verification, data calculation, hard copy forms into digital, and approval process",
