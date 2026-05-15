@@ -1,7 +1,15 @@
 // Summary And Greeting Section
 
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import sacstateLogo from "./assets/images/sacstate.png";
+import avsLogo from "./assets/images/avs.jpg";
+import doradoLogo from "./assets/images/dorado.jpg";
+import saayaHealthLogo from "./assets/images/saayaHealthLogo.webp";
+import nextuLogo from "./assets/images/nextuLogo.webp";
+import courseraLogo from "./assets/images/coursera.png";
+import amaLogo from "./assets/images/ama.png";
+import udemyLogo from "./assets/images/udemy-v2.png";
+import splashAnimation from "./assets/lottie/splashAnimation.json";
 
 // Splash Screen
 
@@ -123,7 +131,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "California State University Sacramento",
-      logo: require("./assets/images/sacstate.png"),
+      logo: sacstateLogo,
       subHeader: "Bachelor of Science in Computer Science",
       duration: "2008 - 2012",
       desc: "Senior Project",
@@ -136,7 +144,7 @@ const educationInfo = {
     },
     // {
     //   schoolName: "Stanford University",
-    //   logo: require("./assets/images/stanfordLogo.png"),
+    //   logo: stanfordLogo, // If needed, import at top
     //   subHeader: "Bachelor of Science in Computer Science",
     //   duration: "September 2013 - April 2017",
     //   desc:
@@ -174,7 +182,7 @@ const workExperiences = {
     {
       role: "Software Engineer",
       company: "Atlas Technical Consultants",
-      companylogo: require("./assets/images/avs.jpg"),
+      companylogo: avsLogo,
       date: "May 2016 – Present",
       desc: "Atlas Technical Consultants (Acquired Alta Vista Solutions in 2020). Experienced with Yii2 and Laravel frameworks and built application mainly in PHP and JavaScript language. Worked on many small projects in different languages such as React, Python, C++ and Visual basic",
       descBullets: [
@@ -193,7 +201,7 @@ const workExperiences = {
     {
       role: "Quality Assurance Engineer",
       company: "Dorado Software",
-      companylogo: require("./assets/images/dorado.jpg"),
+      companylogo: doradoLogo,
       date: "Aug 2012 – Apr 2016",
       desc: "Quality Assurance testing for network management software that manage network routers and switches",
       descBullets: [
@@ -215,7 +223,7 @@ const workExperiences = {
 To know how to get github key look at readme.md */
 
 const openSource = {
-  githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
+  githubConvertedToken: "", // Set your GitHub token here if needed, or leave as empty string
   githubUserName: "greentea524", // Change to your github username to view your profile in Contact Section.
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
   display: false, // Set false to hide this section, defaults to true
@@ -228,7 +236,7 @@ const bigProjects = {
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
+      image: saayaHealthLogo,
       projectName: "Saayahealth",
       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       footerLink: [
@@ -240,7 +248,7 @@ const bigProjects = {
       ],
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
+      image: nextuLogo,
       projectName: "Nextu",
       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       footerLink: [
@@ -266,7 +274,7 @@ const achievementSection = {
     {
       title: "Python Data Structures",
       subtitle: "Coursera",
-      image: require("./assets/images/coursera.png"),
+      image: courseraLogo,
       footerLink: [
         {
           name: "Certification",
@@ -281,7 +289,7 @@ const achievementSection = {
     {
       title: "Front-end Web Development with React",
       subtitle: "Coursera",
-      image: require("./assets/images/coursera.png"),
+      image: courseraLogo,
       footerLink: [
         {
           name: "Certification",
@@ -292,7 +300,7 @@ const achievementSection = {
     {
       title: "System Administration and IT Infrastructure Services",
       subtitle: "Coursera",
-      image: require("./assets/images/coursera.png"),
+      image: courseraLogo,
       footerLink: [
         {
           name: "Certification",
@@ -303,13 +311,13 @@ const achievementSection = {
     {
       title: "Management Skills for New Managers",
       subtitle: "American Management Association",
-      image: require("./assets/images/ama.png"),
+      image: amaLogo,
       footerLink: [],
     },
     {
       title: "Jenkins, From Zero To Hero: Become a DevOps Jenkins Master",
       subtitle: "Udemy",
-      image: require("./assets/images/udemy-v2.png"),
+      image: udemyLogo,
       footerLink: [
         {
           name: "Certification",
@@ -320,7 +328,7 @@ const achievementSection = {
     {
       title: "Postman: The Complete Guide - REST API Testing",
       subtitle: "Udemy",
-      image: require("./assets/images/udemy-v2.png"),
+      image: udemyLogo,
       footerLink: [
         {
           name: "Certification",
@@ -331,7 +339,7 @@ const achievementSection = {
     {
       title: "Google AI Essentials",
       subtitle: "Coursera",
-      image: require("./assets/images/coursera.png"),
+      image: courseraLogo,
       footerLink: [
         {
           name: "Certification",
@@ -342,7 +350,7 @@ const achievementSection = {
     {
       title: "Fundamentals of Project Planning and Management",
       subtitle: "Coursera",
-      image: require("./assets/images/coursera.png"),
+      image: courseraLogo,
       footerLink: [
         {
           name: "Certification",
@@ -353,7 +361,7 @@ const achievementSection = {
     {
       title: "Introduction to Software Product Management",
       subtitle: "Coursera",
-      image: require("./assets/images/coursera.png"),
+      image: courseraLogo,
       footerLink: [
         {
           name: "Certification",
@@ -364,7 +372,7 @@ const achievementSection = {
     {
       title: "Flutter and Dart: Developing iOS, Android, and Mobile Apps",
       subtitle: "Coursera",
-      image: require("./assets/images/coursera.png"),
+      image: courseraLogo,
       footerLink: [
         {
           name: "Certification",

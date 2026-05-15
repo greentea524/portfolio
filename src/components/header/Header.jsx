@@ -69,18 +69,11 @@ function Header() {
               <a href="#talks">Talks</a>
             </li>
           )}
-          <li>
-            <a href="#contact">Contact Me</a>
-          </li>
-          <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              <ToggleSwitch />
-            </a>
-          </li>
         </ul>
+        <ToggleSwitch />
       </header>
     </Headroom>
   );
 }
-// Deleted: migrated to Header.jsx
+
+export default Header;

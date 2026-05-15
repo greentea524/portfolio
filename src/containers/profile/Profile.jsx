@@ -1,7 +1,7 @@
-// File migrated to Profile.jsx
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { openSource } from "../../portfolio";
-import Contact from "../contact/Contact";
-import Loading from "../loading/Loading";
+import Contact from "../contact/Contact.jsx";
+import Loading from "../loading/Loading.jsx";
 
 const renderLoader = () => <Loading />;
 const GithubProfileCard = lazy(() =>
@@ -36,6 +36,7 @@ export default function Profile() {
       getProfileData();
     }
   }, []);
+
   if (
     openSource.display &&
     openSource.showGithubProfile === "true" &&
