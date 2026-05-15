@@ -5,7 +5,7 @@ import Loading from "../loading/Loading";
 
 const renderLoader = () => <Loading />;
 const GithubProfileCard = lazy(() =>
-  import("../../components/githubProfileCard/GithubProfileCard"),
+  import("../../components/githubProfileCard/GithubProfileCard.jsx"),
 );
 export default function Profile() {
   const [prof, setrepo] = useState([]);

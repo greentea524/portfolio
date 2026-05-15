@@ -25,7 +25,8 @@
   "scripts": {
     "predeploy": "npm run build",
     "start": "vite",
-    "build": "vite build",
+    "build": "vite build --outDir docs",
+    "deploy": "gh-pages -b master -d docs",
     "preview": "vite preview",
     "format": "prettier --write \"./**/*.{js,css,json}\"",
     "build-css": "sass src/styles:dist/styles"
