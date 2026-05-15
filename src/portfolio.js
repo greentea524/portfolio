@@ -19,7 +19,7 @@ const greeting = {
   username: "David Phong",
   title: "Hi all, I'm David",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of designing and building Web applications with JavaScript / Reactjs and some other cool libraries and frameworks."
+    "A passionate Full Stack Software Developer 🚀 having an experience of designing and building Web applications with JavaScript / Reactjs and some other cool libraries and frameworks.",
   ),
   // resumeLink:
   //   "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing",
@@ -50,13 +50,13 @@ const skillsSection = {
     emoji(
       "⚡ " +
         devExperience +
-        " years of experience in software development, 3 years in quality assurance"
+        " years of experience in software development, 3 years in quality assurance",
     ),
     emoji(
-      "⚡ Develop interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Develop interactive Front end / User Interfaces for your web and mobile applications",
     ),
     emoji(
-      "⚡ Develop applications with Yii2 framework and worked with MySQL Databases"
+      "⚡ Develop applications with Yii2 framework and worked with MySQL Databases",
     ),
     emoji("⚡ Develop executables and scripts using Python, C++, Visual basic"),
     // emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
@@ -347,6 +347,28 @@ const achievementSection = {
         {
           name: "Certification",
           url: "https://www.coursera.org/account/accomplishments/verify/C3S8J5LDWUJY",
+        },
+      ],
+    },
+    {
+      title: "Introduction to Software Product Management",
+      subtitle: "Coursera",
+      image: require("./assets/images/coursera.png"),
+      footerLink: [
+        {
+          name: "Certification",
+          url: "https://www.coursera.org/account/accomplishments/verify/L3PG5D25DYGS",
+        },
+      ],
+    },
+    {
+      title: "Flutter and Dart: Developing iOS, Android, and Mobile Apps",
+      subtitle: "Coursera",
+      image: require("./assets/images/coursera.png"),
+      footerLink: [
+        {
+          name: "Certification",
+          url: "https://www.coursera.org/account/accomplishments/verify/T9RI6BO2UTKC",
         },
       ],
     },
