@@ -60,6 +60,17 @@ export default function ExperienceCard({ cardInfo, isDark }) {
         >
           {cardInfo.role}
         </h5>
+        {cardInfo.date && (
+          <p
+            className={
+              isDark
+                ? "experience-text-date dark-mode-text"
+                : "experience-text-date"
+            }
+          >
+            {cardInfo.date}
+          </p>
+        )}
         {cardInfo.desc && (
           <p
             className={

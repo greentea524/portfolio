@@ -67,7 +67,9 @@ const skillsSection = {
       "⚡ Develop applications with Yii2 framework and worked with MySQL Databases",
     ),
     emoji("⚡ Develop executables and scripts using Python, C++, Visual basic"),
-    // emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+    emoji(
+      "⚡ Mobile application IOS development with React Native and Flutter",
+    ),
     // emoji(
     //   "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
     // )
