@@ -24,10 +24,10 @@ export default function Talks() {
           >
             {talkSection.subtitle}
           </p>
-          {talkSection.talks.map((talk, i) => {
+          {talkSection.talks.map((talk) => {
             return (
               <TalkCard
-                key={i}
+                key={talk.title || talk.event_url}
                 talkDetails={{
                   title: talk.title,
                   subtitle: talk.subtitle,

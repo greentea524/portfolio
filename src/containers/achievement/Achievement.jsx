@@ -34,10 +34,10 @@ export default function Achievement() {
             </p>
           </div>
           <div className="achievement-cards-div">
-            {achievementSection.achievementsCards.map((card, i) => {
+            {achievementSection.achievementsCards.map((card) => {
               return (
                 <AchievementCard
-                  key={i}
+                  key={card.title}
                   isDark={isDark}
                   cardInfo={{
                     title: card.title,

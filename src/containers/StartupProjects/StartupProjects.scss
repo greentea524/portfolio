@@ -60,7 +60,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem 1rem;
 }
-.project-card-footer span.project-tag {
+.project-card-footer .project-tag {
   background: $buttonColor;
   color: $lightBackground3;
   vertical-align: middle;
@@ -76,6 +76,8 @@
   padding: 0 0.75em;
   cursor: pointer;
   transition: 0.2s ease-in;
+  text-decoration: none;
+  border: none;
 }
 
 @media (max-width: 768px) {

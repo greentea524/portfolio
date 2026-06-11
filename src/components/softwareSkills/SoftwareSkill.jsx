@@ -7,10 +7,10 @@ export default function SoftwareSkill() {
     <div>
       <div className="software-skills-main-div">
         <ul className="dev-icons">
-          {skillsSection.softwareSkills.map((skills, i) => {
+          {skillsSection.softwareSkills.map((skills) => {
             return (
               <li
-                key={i}
+                key={skills.skillName}
                 className="software-skill-inline"
                 name={skills.skillName}
               >

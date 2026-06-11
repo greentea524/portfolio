@@ -55,7 +55,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.certificate-card-footer span.certificate-tag {
+.certificate-card-footer .certificate-tag {
   background: globalColor.$buttonColor;
   color: globalColor.$lightBackground3;
   vertical-align: middle;
@@ -71,7 +71,8 @@
   padding: 0 0.75em;
   cursor: pointer;
   transition: 0.2s ease-in;
+  border: none;
 }
-span.certificate-tag:hover {
+.certificate-tag:hover {
   background: globalColor.$buttonHover;
 }

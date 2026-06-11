@@ -29,19 +29,20 @@ export default function Podcast() {
           </p>
         </div>
         <div className="podcast-main-div">
-          {podcastSection.podcast.map((podcastLink, i) => {
+          {podcastSection.podcast.map((podcastLink) => {
             if (!podcastLink) {
               console.log(
                 `Podcast link for ${podcastSection.title} is missing`,
               );
             }
             return (
-              <div key={i}>
+              <div key={`${podcastSection.title}-${podcastLink}`}>
                 <iframe
                   className="podcast"
                   src={podcastLink}
                   frameBorder="0"
                   scrolling="no"
+                  sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
                   title="Podcast"
                 ></iframe>
               </div>

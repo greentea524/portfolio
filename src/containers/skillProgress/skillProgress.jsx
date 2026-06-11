@@ -12,12 +12,12 @@ export default function StackProgress() {
         <div className="skills-container">
           <div className="skills-bar">
             <h1 className="skills-heading">Proficiency</h1>
-            {techStack.experience.map((exp, i) => {
+            {techStack.experience.map((exp) => {
               const progressStyle = {
                 width: exp.progressPercentage,
               };
               return (
-                <div key={i} className="skill">
+                <div key={exp.Stack} className="skill">
                   <p>{exp.Stack}</p>
                   <div className="meter">
                     <span style={progressStyle}></span>

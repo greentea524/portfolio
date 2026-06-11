@@ -9,6 +9,8 @@
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  display: block;
+  text-decoration: none;
 }
 .repo-card-div:hover {
   box-shadow: globalColor.$lightBoxShadowDark 0px 20px 30px -10px;

@@ -2,6 +2,27 @@ import React, { useState, createRef } from "react";
 import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
 
+function rgb(values) {
+  return typeof values === "undefined"
+    ? null
+    : "rgb(" + values.join(", ") + ")";
+}
+
+function DescBullets({ descBullets, isDark, company }) {
+  if (!descBullets) {
+    return null;
+  }
+
+  return descBullets.map((item) => (
+    <li
+      key={`${company}-${item}`}
+      className={isDark ? "subTitle dark-mode-text" : "subTitle"}
+    >
+      {item}
+    </li>
+  ));
+}
+
 export default function ExperienceCard({ cardInfo, isDark }) {
   const [colorArrays, setColorArrays] = useState([]);
   const imgRef = createRef();
@@ -10,25 +31,6 @@ export default function ExperienceCard({ cardInfo, isDark }) {
     const colorThief = new ColorThief();
     setColorArrays(colorThief.getColor(imgRef.current));
   }
-
-  function rgb(values) {
-    return typeof values === "undefined"
-      ? null
-      : "rgb(" + values.join(", ") + ")";
-  }
-
-  const GetDescBullets = ({ descBullets, isDark }) => {
-    return descBullets
-      ? descBullets.map((item, i) => (
-          <li
-            key={i}
-            className={isDark ? "subTitle dark-mode-text" : "subTitle"}
-          >
-            {item}
-          </li>
-        ))
-      : null;
-  };
 
   return (
     <div className={isDark ? "experience-card-dark" : "experience-card"}>
@@ -84,9 +86,10 @@ export default function ExperienceCard({ cardInfo, isDark }) {
         )}
         {cardInfo.descBullets && (
           <ul className="experience-text-bullets">
-            <GetDescBullets
+            <DescBullets
               descBullets={cardInfo.descBullets}
               isDark={isDark}
+              company={cardInfo.company}
             />
           </ul>
         )}

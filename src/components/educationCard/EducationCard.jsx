@@ -3,18 +3,20 @@ import { Fade, Slide } from "react-awesome-reveal";
 import "./EducationCard.scss";
 import StyleContext from "../../contexts/StyleContext";
 
+function DescBullets({ descBullets }) {
+  if (!descBullets) {
+    return null;
+  }
+
+  return descBullets.map((item) => (
+    <li key={item} className="subTitle">
+      {item}
+    </li>
+  ));
+}
+
 export default function EducationCard({ school }) {
   const imgRef = createRef();
-
-  const GetDescBullets = ({ descBullets }) => {
-    return descBullets
-      ? descBullets.map((item, i) => (
-          <li key={i} className="subTitle">
-            {item}
-          </li>
-        ))
-      : null;
-  };
   const { isDark } = useContext(StyleContext);
 
   if (!school.logo)
@@ -57,7 +59,7 @@ export default function EducationCard({ school }) {
               <p className="education-text-desc">{school.desc}</p>
               <div className="education-text-bullets">
                 <ul>
-                  <GetDescBullets descBullets={school.descBullets} />
+                  <DescBullets descBullets={school.descBullets} />
                 </ul>
               </div>
             </div>

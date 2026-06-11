@@ -5,14 +5,6 @@ import { bigProjects } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function StartupProject() {
-  function openUrlInNewTab(url) {
-    if (!url) {
-      return;
-    }
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
-
   const { isDark } = useContext(StyleContext);
   if (!bigProjects.display) {
     return null;
@@ -33,10 +25,10 @@ export default function StartupProject() {
           </p>
 
           <div className="projects-container">
-            {bigProjects.projects.map((project, i) => {
+            {bigProjects.projects.map((project) => {
               return (
                 <div
-                  key={i}
+                  key={project.projectName || project.projectDesc}
                   className={
                     isDark
                       ? "dark-mode project-card project-card-dark"
@@ -67,17 +59,22 @@ export default function StartupProject() {
                     </p>
                     {project.footerLink ? (
                       <div className="project-card-footer">
-                        {project.footerLink.map((link, i) => {
+                        {project.footerLink.map((link) => {
                           return (
-                            <span
-                              key={i}
+                            <a
+                              key={
+                                link.url ||
+                                `${project.projectName}-${link.name}`
+                              }
                               className={
                                 isDark ? "dark-mode project-tag" : "project-tag"
                               }
-                              onClick={() => openUrlInNewTab(link.url)}
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               {link.name}
-                            </span>
+                            </a>
                           );
                         })}
                       </div>

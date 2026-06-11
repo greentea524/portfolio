@@ -1,16 +1,16 @@
 import React from "react";
 import "./AchievementCard.scss";
 
-export default function AchievementCard({ cardInfo, isDark }) {
-  function openUrlInNewTab(url, name) {
-    if (!url) {
-      console.log(`URL for ${name} not found`);
-      return;
-    }
-    var win = window.open(url, "_blank");
-    win.focus();
+function openUrlInNewTab(url, name) {
+  if (!url) {
+    console.log(`URL for ${name} not found`);
+    return;
   }
+  var win = window.open(url, "_blank");
+  win.focus();
+}
 
+export default function AchievementCard({ cardInfo, isDark }) {
   return (
     <div className={isDark ? "dark-mode certificate-card" : "certificate-card"}>
       <div className="certificate-image-div">
@@ -29,17 +29,18 @@ export default function AchievementCard({ cardInfo, isDark }) {
         </p>
       </div>
       <div className="certificate-card-footer">
-        {cardInfo.footer.map((v, i) => {
+        {cardInfo.footer.map((v) => {
           return (
-            <span
-              key={i}
+            <button
+              key={v.url || `${cardInfo.title}-${v.name}`}
               className={
                 isDark ? "dark-mode certificate-tag" : "certificate-tag"
               }
+              type="button"
               onClick={() => openUrlInNewTab(v.url, v.name)}
             >
               {v.name}
-            </span>
+            </button>
           );
         })}
       </div>
