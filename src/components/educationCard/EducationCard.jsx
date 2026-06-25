@@ -1,4 +1,4 @@
-import React, { createRef, useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
 import "./EducationCard.scss";
 import StyleContext from "../../contexts/StyleContext";
@@ -16,7 +16,7 @@ function DescBullets({ descBullets }) {
 }
 
 export default function EducationCard({ school }) {
-  const imgRef = createRef();
+  const imgRef = useRef(null);
   const { isDark } = useContext(StyleContext);
 
   if (!school.logo)

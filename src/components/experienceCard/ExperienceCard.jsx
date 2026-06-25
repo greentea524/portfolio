@@ -1,4 +1,4 @@
-import React, { useState, createRef } from "react";
+import React, { useRef, useState } from "react";
 import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
 
@@ -25,7 +25,7 @@ function DescBullets({ descBullets, isDark, company }) {
 
 export default function ExperienceCard({ cardInfo, isDark }) {
   const [colorArrays, setColorArrays] = useState([]);
-  const imgRef = createRef();
+  const imgRef = useRef(null);
 
   function getColorArrays() {
     const colorThief = new ColorThief();
