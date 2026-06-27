@@ -4,8 +4,6 @@ import emoji from "react-easy-emoji";
 import sacstateLogo from "./assets/images/sacstate.png";
 import avsLogo from "./assets/images/avs.jpg";
 import doradoLogo from "./assets/images/dorado.jpg";
-import saayaHealthLogo from "./assets/images/saayaHealthLogo.webp";
-import nextuLogo from "./assets/images/nextuLogo.webp";
 import courseraLogo from "./assets/images/coursera.png";
 import amaLogo from "./assets/images/ama.png";
 import udemyLogo from "./assets/images/udemy-v2.png";
@@ -234,34 +232,56 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Projects",
+  subtitle: "selected work from my projects",
   projects: [
     {
-      image: saayaHealthLogo,
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      projectName: "Web Games Hub + Fuel Calculator + Data Dashboard",
+      projectDesc:
+        "Combined highlight from my Vite app featuring browser games, a unit-aware fuel calculator, and an interactive chart/table data dashboard.",
+      techStack: [
+        "React 18",
+        "Vite",
+        "React Bootstrap",
+        "Bootstrap 5",
+        "React Google Charts",
+        "TanStack React Query",
+        "React Transition Group",
+        "GitHub Pages",
+      ],
       footerLink: [
         {
-          name: "Visit Website",
-          url: "fa",
+          name: "Link",
+          url: "https://greentea524.github.io/vite-project",
         },
-        //  you can add extra buttons here.
       ],
     },
     {
-      image: nextuLogo,
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      projectName: "Project Placeholder 1",
+      projectDesc:
+        "Placeholder project card. Replace this with your next featured project description.",
+      techStack: ["React", "Vite", "TBD"],
       footerLink: [
         {
-          name: "Visit Website",
-          url: "",
+          name: "Link",
+          url: "https://greentea524.github.io/portfolio/",
+        },
+      ],
+    },
+    {
+      projectName: "Project Placeholder 2",
+      projectDesc:
+        "Placeholder project card. Update this entry when you are ready to showcase another build.",
+      techStack: ["JavaScript", "UI/UX", "TBD"],
+      footerLink: [
+        {
+          name: "Link",
+          url: "https://greentea524.github.io/portfolio/",
         },
       ],
     },
   ],
-  display: false, // Set false to hide this section, defaults to true
+  display: true, // Set false to hide this section, defaults to true
 };
 
 // Achievement Section

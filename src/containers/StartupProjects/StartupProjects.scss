@@ -60,7 +60,8 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem 1rem;
 }
-.project-card-footer .project-tag {
+.project-card-footer .project-tag,
+.project-tech-stack .project-tag {
   background: $buttonColor;
   color: $lightBackground3;
   vertical-align: middle;
@@ -78,6 +79,14 @@
   transition: 0.2s ease-in;
   text-decoration: none;
   border: none;
+}
+.project-tech-stack .project-tag {
+  cursor: default;
+  background: rgba($buttonColor, 0.15);
+  color: $buttonColor;
+}
+.project-tech-stack {
+  margin-bottom: 0.75rem;
 }
 
 @media (max-width: 768px) {
