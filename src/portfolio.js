@@ -257,26 +257,38 @@ const bigProjects = {
       ],
     },
     {
-      projectName: "Project Placeholder 1",
+      projectName: "Flutter Shopping App",
       projectDesc:
-        "Placeholder project card. Replace this with your next featured project description.",
-      techStack: ["React", "Vite", "TBD"],
+        "Cross-platform Flutter shop with a category-grouped catalog, an editable cart with shipping tiers and live tax/total math, and persistent order history powered by Hive — including order tracking, status progression, and cancel/archive/delete actions.",
+      techStack: [
+        "Flutter",
+        "Dart",
+        "Material 3",
+        "Hive",
+        "Local Storage",
+      ],
       footerLink: [
         {
-          name: "Link",
-          url: "https://greentea524.github.io/portfolio/",
+          name: "GitHub",
+          url: "https://github.com/greentea524/shopping-app",
         },
       ],
     },
     {
-      projectName: "Project Placeholder 2",
+      projectName: "Nebula Play — Flutter Games Hub",
       projectDesc:
-        "Placeholder project card. Update this entry when you are ready to showcase another build.",
-      techStack: ["JavaScript", "UI/UX", "TBD"],
+        "A neon-themed Flutter arcade bundling five playable games — Alien Invasion, Pacman Arcade, 2048 Fusion, a daily Wordle clone, and Minesweeper — with persistent high scores via local storage and a responsive desktop/mobile game-card grid.",
+      techStack: [
+        "Flutter",
+        "Dart",
+        "Provider",
+        "Local Storage",
+        "Material Design",
+      ],
       footerLink: [
         {
-          name: "Link",
-          url: "https://greentea524.github.io/portfolio/",
+          name: "GitHub",
+          url: "https://github.com/greentea524/flutter_application",
         },
       ],
     },
