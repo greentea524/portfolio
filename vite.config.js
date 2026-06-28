@@ -9,5 +9,20 @@ export default defineConfig({
   },
   build: {
     outDir: "build",
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("/assets/lottie/")) {
+            return "lottie-animations";
+          }
+          if (id.includes("node_modules/lottie-web") || id.includes("node_modules/react-lottie")) {
+            return "vendor-lottie";
+          }
+          if (id.includes("node_modules/react-dom") || id.includes("node_modules/react/")) {
+            return "vendor-react";
+          }
+        },
+      },
+    },
   },
 });
