@@ -292,6 +292,23 @@ const bigProjects = {
         },
       ],
     },
+    {
+      projectName: "Platform Game — Godot 2D Platformer",
+      projectDesc:
+        "A 2D platformer built in Godot 4 with polished movement (coyote time, variable jump height, double jump), stompable patrolling enemies, spikes and hazards, coins and checkpoints, and six levels across two worlds. Levels are authored as ASCII layouts in GDScript and built at runtime, plus parallax backgrounds, avatar selection, and full menu/pause flow.",
+      techStack: [
+        "Godot 4",
+        "GDScript",
+        "TileMapLayer",
+        "2D Game Dev",
+      ],
+      footerLink: [
+        {
+          name: "GitHub",
+          url: "https://github.com/greentea524/godot-game",
+        },
+      ],
+    },
   ],
   display: true, // Set false to hide this section, defaults to true
 };
