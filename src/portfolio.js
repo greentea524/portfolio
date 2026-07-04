@@ -68,6 +68,12 @@ const skillsSection = {
     emoji(
       "⚡ Mobile application IOS development with React Native and Flutter",
     ),
+    emoji(
+      "⚡ Build real-time computer vision apps with Python, OpenCV, and MediaPipe — hand, gesture, and eye tracking",
+    ),
+    emoji(
+      "⚡ Create interactive browser games and real-time multiplayer experiences with HTML5 Canvas and WebSockets",
+    ),
     // emoji(
     //   "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
     // )
@@ -253,6 +259,47 @@ const bigProjects = {
         {
           name: "Link",
           url: "https://greentea524.github.io/vite-project",
+        },
+      ],
+    },
+    {
+      projectName: "2D Platformer Game (Multiplayer)",
+      projectDesc:
+        "A canvas-based 2D platformer inside my Vite app — six levels across two worlds with coins, stomp-able enemies, checkpoints, double jumps, and selectable avatars. Ported from a Godot project, it renders on an HTML5 canvas with React overlays for menus and HUD, plus mobile-friendly touch controls (virtual joystick + fullscreen). A work-in-progress \"Race a friend\" mode uses Socket.IO for real-time 4-player races with a synced countdown and live leaderboard.",
+      techStack: [
+        "React 18",
+        "Vite",
+        "HTML5 Canvas",
+        "Socket.IO",
+        "WebSockets",
+        "Game Loop / Physics",
+      ],
+      footerLink: [
+        {
+          name: "Link",
+          url: "https://greentea524.github.io/vite-project",
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/greentea524/vite-project",
+        },
+      ],
+    },
+    {
+      projectName: "camera-track — Real-Time Webcam Vision Toys",
+      projectDesc:
+        "A trio of real-time computer-vision apps driven by a webcam: a finger counter that sums 0–10 across two hands, an eye tracker that reads gaze direction plus blink rate, drowsiness, and no-blink/staring time from Face Mesh irises, and a gesture-controlled Rock-Paper-Scissors game with countdown and scorekeeping. Each app draws a live landmark overlay in a resizable preview window and ships a hardware-free self-test mode, all reachable from a single menu launcher.",
+      techStack: [
+        "Python",
+        "OpenCV",
+        "MediaPipe",
+        "NumPy",
+        "Computer Vision",
+      ],
+      footerLink: [
+        {
+          name: "GitHub",
+          url: "https://github.com/greentea524/camera-track",
         },
       ],
     },
