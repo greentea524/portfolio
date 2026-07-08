@@ -263,25 +263,29 @@ const bigProjects = {
       ],
     },
     {
-      projectName: "2D Platformer Game (Multiplayer)",
+      projectName: "2D Platformer Game (Web & Godot)",
       projectDesc:
-        "A canvas-based 2D platformer inside my Vite app — six levels across two worlds with coins, stomp-able enemies, checkpoints, double jumps, and selectable avatars. Ported from a Godot project, it renders on an HTML5 canvas with React overlays for menus and HUD, plus mobile-friendly touch controls (virtual joystick + fullscreen). A work-in-progress \"Race a friend\" mode uses Socket.IO for real-time 4-player races with a synced countdown and live leaderboard.",
+        "A 2D platformer originally built in Godot 4 and ported to a Vite app rendering on an HTML5 canvas. Features include six levels across two worlds, polished movement (coyote time, variable jump height, double jump), stompable enemies, hazards, coins, and checkpoints. The web version includes React overlays for menus and HUD, mobile-friendly touch controls, and a work-in-progress multiplayer \"Race a friend\" mode using Socket.IO for real-time 4-player races.",
       techStack: [
         "React 18",
         "Vite",
+        "Godot 4",
         "HTML5 Canvas",
         "Socket.IO",
-        "WebSockets",
         "Game Loop / Physics",
       ],
       footerLink: [
         {
           name: "Link",
-          url: "https://greentea524.github.io/vite-project",
+          url: "https://greentea524.github.io/vite-project/platformer",
         },
         {
-          name: "GitHub",
+          name: "Web GitHub",
           url: "https://github.com/greentea524/vite-project",
+        },
+        {
+          name: "Godot GitHub",
+          url: "https://github.com/greentea524/godot-game",
         },
       ],
     },
@@ -339,23 +343,7 @@ const bigProjects = {
         },
       ],
     },
-    {
-      projectName: "Platform Game — Godot 2D Platformer",
-      projectDesc:
-        "A 2D platformer built in Godot 4 with polished movement (coyote time, variable jump height, double jump), stompable patrolling enemies, spikes and hazards, coins and checkpoints, and six levels across two worlds. Levels are authored as ASCII layouts in GDScript and built at runtime, plus parallax backgrounds, avatar selection, and full menu/pause flow.",
-      techStack: [
-        "Godot 4",
-        "GDScript",
-        "TileMapLayer",
-        "2D Game Dev",
-      ],
-      footerLink: [
-        {
-          name: "GitHub",
-          url: "https://github.com/greentea524/godot-game",
-        },
-      ],
-    },
+
   ],
   display: true, // Set false to hide this section, defaults to true
 };
