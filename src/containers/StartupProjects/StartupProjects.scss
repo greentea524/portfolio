@@ -89,9 +89,66 @@
   margin-bottom: 0.75rem;
 }
 
+/* Screenshot gallery — only rendered for projects that define `gallery`. */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.6rem;
+  margin: 0.25rem 0 1rem;
+  text-align: left;
+}
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.35rem;
+  border-radius: 6px;
+  border: 1px solid globalColor.$lightBorder1;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+a.gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: globalColor.$lightBoxShadowDark 0px 8px 16px -10px;
+}
+.gallery-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  /* Screenshots vary in aspect; crop from the top so the board/HUD stays visible. */
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 4px;
+  background: globalColor.$lightBackground2;
+}
+.gallery-caption {
+  font-size: 0.72rem;
+  line-height: 1.2;
+  text-align: center;
+  color: globalColor.$cardSubtitle;
+}
+.project-card-dark .gallery-item {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+.project-card-dark .gallery-caption {
+  color: rgba(255, 255, 255, 0.75);
+}
+.project-card-dark .gallery-image {
+  background: rgba(255, 255, 255, 0.04);
+}
+a.project-card-dark:hover,
+.project-card-dark a.gallery-item:hover {
+  box-shadow: 0px 8px 16px -10px globalColor.$darkBoxShadow;
+}
+
 @media (max-width: 768px) {
   .project-subtitle {
     font-size: 16px;
     text-align: center;
+  }
+  .project-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   }
 }

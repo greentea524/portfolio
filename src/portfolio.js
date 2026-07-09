@@ -9,6 +9,18 @@ import amaLogo from "./assets/images/ama.png";
 import udemyLogo from "./assets/images/udemy-v2.png";
 import splashAnimation from "./assets/lottie/splashAnimation.json";
 
+// Screenshots of each game in the Vite games hub.
+import shotMinesweeper from "./assets/images/games/minesweeper.webp";
+import shotDice21 from "./assets/images/games/dice21.webp";
+import shotSudoku from "./assets/images/games/sudoku.webp";
+import shotTicTacToe from "./assets/images/games/tictactoe.webp";
+import shot2048 from "./assets/images/games/2048.webp";
+import shotWordle from "./assets/images/games/wordle.webp";
+import shotInvasion from "./assets/images/games/invasion.webp";
+import shotPacman from "./assets/images/games/pacman.webp";
+import shotBoxing from "./assets/images/games/boxing.webp";
+import shotPlatformer from "./assets/images/games/platformer.webp";
+
 // Splash Screen
 
 const splashScreen = {
@@ -242,23 +254,100 @@ const bigProjects = {
   subtitle: "selected work from my projects",
   projects: [
     {
-      projectName: "Web Games Hub + Fuel Calculator + Data Dashboard",
+      projectName: "Web Games Hub",
       projectDesc:
-        "Combined highlight from my Vite app featuring browser games, a unit-aware fuel calculator, and an interactive chart/table data dashboard.",
+        "A retro desktop-themed arcade in my Vite app collecting ten browser games. Four are built as React components rendered in-app — Minesweeper, Dice 21, Sudoku, and TicTacToe — alongside six standalone JavaScript games including a canvas Pacman, an alien-invasion shooter, a Wordle clone, 2048, an RPG boxing sim, and a multiplayer 2D platformer.",
       techStack: [
         "React 18",
         "Vite",
+        "JavaScript",
+        "HTML5 Canvas",
         "React Bootstrap",
-        "Bootstrap 5",
-        "React Google Charts",
-        "TanStack React Query",
-        "React Transition Group",
         "GitHub Pages",
+      ],
+      gallery: [
+        {
+          name: "Minesweeper",
+          image: shotMinesweeper,
+          url: "https://greentea524.github.io/vite-project",
+        },
+        {
+          name: "Dice 21",
+          image: shotDice21,
+          url: "https://greentea524.github.io/vite-project",
+        },
+        {
+          name: "Sudoku",
+          image: shotSudoku,
+          url: "https://greentea524.github.io/vite-project",
+        },
+        {
+          name: "TicTacToe",
+          image: shotTicTacToe,
+          url: "https://greentea524.github.io/vite-project",
+        },
+        {
+          name: "2048",
+          image: shot2048,
+          url: "https://greentea524.github.io/game/js-2048-main/",
+        },
+        {
+          name: "Wordle",
+          image: shotWordle,
+          url: "https://greentea524.github.io/game/wordle-clone-main/",
+        },
+        {
+          name: "Invasion",
+          image: shotInvasion,
+          url: "https://greentea524.github.io/game/js-alien-invasion/",
+        },
+        {
+          name: "Pacman",
+          image: shotPacman,
+          url: "https://greentea524.github.io/game/js-pacman/",
+        },
+        {
+          name: "Boxing RPG",
+          image: shotBoxing,
+          url: "https://greentea524.github.io/game/js-boxing/",
+        },
+        {
+          name: "Platformer",
+          image: shotPlatformer,
+          url: "https://greentea524.github.io/vite-project/platformer/",
+        },
       ],
       footerLink: [
         {
           name: "Link",
           url: "https://greentea524.github.io/vite-project",
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/greentea524/vite-project",
+        },
+      ],
+    },
+    {
+      projectName: "Developer Utilities & Tools",
+      projectDesc:
+        "The utilities side of the same Vite app: a unit-aware fuel-cost calculator, an interactive data dashboard with sortable tables and Google Charts, a Rubik's Cube solver that computes a solution from a scrambled state, and a fake hacker terminal that streams auto-scrolling logs for screen recordings.",
+      techStack: [
+        "React 18",
+        "Vite",
+        "React Google Charts",
+        "TanStack React Query",
+        "React Transition Group",
+        "Bootstrap 5",
+      ],
+      footerLink: [
+        {
+          name: "Link",
+          url: "https://greentea524.github.io/vite-project",
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/greentea524/vite-project",
         },
       ],
     },

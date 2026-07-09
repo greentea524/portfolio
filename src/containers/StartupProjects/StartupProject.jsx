@@ -73,6 +73,41 @@ export default function StartupProject() {
                         ))}
                       </div>
                     ) : null}
+                    {project.gallery ? (
+                      <div className="project-gallery">
+                        {project.gallery.map((shot) => {
+                          const thumb = (
+                            <>
+                              <img
+                                src={shot.image}
+                                alt={`${shot.name} screenshot`}
+                                className="gallery-image"
+                                loading="lazy"
+                              />
+                              <span className="gallery-caption">
+                                {shot.name}
+                              </span>
+                            </>
+                          );
+                          return shot.url ? (
+                            <a
+                              key={shot.name}
+                              className="gallery-item"
+                              href={shot.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`Play ${shot.name} (opens in a new tab)`}
+                            >
+                              {thumb}
+                            </a>
+                          ) : (
+                            <div key={shot.name} className="gallery-item">
+                              {thumb}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    ) : null}
                     {project.footerLink ? (
                       <div className="project-card-footer">
                         {project.footerLink.map((link) => {
