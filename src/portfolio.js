@@ -255,6 +255,7 @@ const bigProjects = {
   projects: [
     {
       projectName: "Web Games Hub",
+      fullWidth: true, // gallery is tall — give it its own grid row
       projectDesc:
         "A retro desktop-themed arcade in my Vite app collecting ten browser games. Four are built as React components rendered in-app — Minesweeper, Dice 21, Sudoku, and TicTacToe — alongside six standalone JavaScript games including a canvas Pacman, an alien-invasion shooter, a Wordle clone, 2048, an RPG boxing sim, and a multiplayer 2D platformer.",
       techStack: [

@@ -29,11 +29,14 @@ export default function StartupProject() {
               return (
                 <div
                   key={project.projectName || project.projectDesc}
-                  className={
+                  className={[
                     isDark
                       ? "dark-mode project-card project-card-dark"
-                      : "project-card project-card-light"
-                  }
+                      : "project-card project-card-light",
+                    project.fullWidth ? "project-card-wide" : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
                 >
                   {project.image ? (
                     <div className="project-image">
