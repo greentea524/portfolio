@@ -49,7 +49,7 @@ const Main = () => {
         {isShowingSplashAnimation && splashScreen.enabled && (
           <SplashScreen />
         )}
-        <div style={{ display: isShowingSplashAnimation && splashScreen.enabled ? "none" : "block" }}>
+        <div style={isShowingSplashAnimation && splashScreen.enabled ? { visibility: "hidden", height: "0px", overflow: "hidden" } : {}}>
           <Header />
           <Greeting />
           <Skills />
