@@ -37,7 +37,7 @@ const greeting = {
   username: "David Phong",
   title: "Hi all, I'm David",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of designing and building Web applications with JavaScript / Reactjs and some other cool libraries and frameworks.",
+    "Passionate Full Stack Developer experienced in designing and developing robust web applications with React.js, JavaScript, and modern frontend/backend technologies.",
   ),
   // resumeLink:
   //   "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing",
