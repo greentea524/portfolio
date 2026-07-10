@@ -298,7 +298,7 @@ const bigProjects = {
         {
           name: "Invasion",
           image: shotInvasion,
-          url: "https://greentea524.github.io/game/js-alien-invasion/",
+          url: "https://greentea524.github.io/vite-project/space/",
         },
         {
           name: "Pacman",
