@@ -20,6 +20,8 @@ import shotInvasion from "./assets/images/games/invasion.webp";
 import shotPacman from "./assets/images/games/pacman.webp";
 import shotBoxing from "./assets/images/games/boxing.webp";
 import shotPlatformer from "./assets/images/games/platformer.webp";
+import shotLanternKeeper from "./assets/images/games/lantern-keeper.jpg";
+import shotStatic from "./assets/images/games/static.jpg";
 
 // Splash Screen
 
@@ -324,6 +326,42 @@ const bigProjects = {
         {
           name: "GitHub",
           url: "https://github.com/greentea524/vite-project",
+        },
+      ],
+    },
+    {
+      projectName: "Retro Pad GBC Games",
+      projectDesc:
+        "A handheld retro arcade featuring Game Boy Color-inspired web games with authentic 160x144 logical resolution, on-screen Retro Pad controls (D-Pad & action buttons), and custom Phaser 3 mechanics. Includes 'Lantern Keeper' — an ability-gated puzzle platformer with double jumps, dashes, and wall-clings — and 'Static' — a top-down mystery adventure featuring mirrored dual-world exploration and dialogue trees.",
+      techStack: [
+        "Phaser 3",
+        "TypeScript",
+        "React 19",
+        "HTML5 Canvas",
+        "Tiled Maps",
+        "Vite",
+        "GitHub Pages",
+      ],
+      gallery: [
+        {
+          name: "Lantern Keeper",
+          image: shotLanternKeeper,
+          url: "https://greentea524.github.io/games/lantern-keeper/",
+        },
+        {
+          name: "Static",
+          image: shotStatic,
+          url: "https://greentea524.github.io/games/static/",
+        },
+      ],
+      footerLink: [
+        {
+          name: "Arcade Hub",
+          url: "https://greentea524.github.io/games/",
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/greentea524/games",
         },
       ],
     },
