@@ -469,6 +469,29 @@ const bigProjects = {
         },
       ],
     },
+    {
+      projectName: "Baby Tracker — Caregiver PWA",
+      projectDesc:
+        "A Flutter web app (installable PWA) for logging a baby's feeds, pumping, diaper changes, and growth, with real-time sync across multiple caregivers. Highlights: a daily timeline with feed-interval stats, a custom-painted growth chart overlaid with WHO percentile curves, US/metric units (lb/oz and fl oz alongside metric), CSV/PDF export for pediatrician visits, and background feed-reminder push notifications via a scheduled Cloud Function.",
+      techStack: [
+        "Flutter Web / PWA",
+        "Dart",
+        "Riverpod",
+        "Firebase Auth",
+        "Cloud Firestore",
+        "Cloud Functions + FCM",
+      ],
+      footerLink: [
+        {
+          name: "Live",
+          url: "https://baby-6f5b0.web.app",
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/greentea524/baby-app",
+        },
+      ],
+    },
 
   ],
   display: true, // Set false to hide this section, defaults to true
