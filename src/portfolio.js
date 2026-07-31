@@ -538,6 +538,30 @@ const bigProjects = {
         },
       ],
     },
+    {
+      projectName: "Recipe Finder — Vue 3 Search App",
+      projectDesc:
+        "A recipe search app built on Vue 3's Composition API and Vue Router, consuming TheMealDB's public API. Debounced search combines with category filtering, and each recipe opens to ingredients with measures, step-by-step instructions, and an embedded video. In-flight requests are aborted when superseded, so a slow early search can't resolve late and overwrite fresher results. Deployed as a single-page app on GitHub Pages, which has no rewrite rules — deep links survive because the build emits a 404.html fallback, verified against a server replicating Pages' exact serving semantics. Loading states are skeletons shaped like the content they replace, which took cumulative layout shift from 0.66 to 0 and Lighthouse performance from 73 to 99.",
+      techStack: [
+        "Vue 3",
+        "TypeScript",
+        "Vue Router",
+        "Vite",
+        "Vanilla CSS",
+        "Vitest",
+        "GitHub Pages",
+      ],
+      footerLink: [
+        {
+          name: "Live",
+          url: "https://greentea524.github.io/vue-recipe-finder/",
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/greentea524/vue-recipe-finder",
+        },
+      ],
+    },
   ],
   display: true, // Set false to hide this section, defaults to true
 };
