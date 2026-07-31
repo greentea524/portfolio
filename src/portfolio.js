@@ -494,7 +494,7 @@ const bigProjects = {
     {
       projectName: "Notes — Statically-Generated Blog",
       projectDesc:
-        "A markdown blog built with the Next.js App Router and published as a fully static export, with no server or database behind it. Posts are local .md files parsed with gray-matter; every route is generated at build time from the filenames via generateStaticParams, so adding a file adds a page. Frontmatter is validated during the build, failing loudly with the offending filename rather than rendering an empty meta tag. Each page carries its own title, description, canonical URL, and Open Graph tags. Scores 100 for performance, accessibility, best practices, and SEO on Lighthouse.",
+        "A markdown blog built with the Next.js App Router and published as a fully static export — no server, no database. Posts are local .md files, and every route is generated at build time from the filenames, so adding a file adds a page. Scores 100 across all four Lighthouse categories.",
       techStack: [
         "Next.js 16 (App Router)",
         "React 19",
@@ -517,7 +517,7 @@ const bigProjects = {
     {
       projectName: "Kanban Board — Drag-and-Drop Task Board",
       projectDesc:
-        "A five-column Kanban board built with React 19 and Tailwind 4, using dnd-kit for drag-and-drop between and within columns. Cards support inline editing and delete-with-confirm, and the board persists to localStorage behind a versioned schema whose reads fall back to a clean board rather than white-screening on a corrupt blob. Every board mutation is a pure function over an immutable board, so the move and reorder logic is covered by unit tests directly instead of by simulating drags. Drag-and-drop is fully keyboard-operable with screen-reader announcements, and collision detection is pointer-first so a card grabbed by its handle lands where the cursor is rather than a column to the right.",
+        "A drag-and-drop task board built with React 19, Tailwind 4, and dnd-kit. Cards move between five columns or reorder within one, with inline editing and local persistence. Drag-and-drop is fully keyboard-operable with screen-reader announcements, and the board logic is written as pure functions covered by unit tests.",
       techStack: [
         "React 19",
         "TypeScript",
@@ -540,7 +540,7 @@ const bigProjects = {
     {
       projectName: "Recipe Finder — Vue 3 Search App",
       projectDesc:
-        "A recipe search app built on Vue 3's Composition API and Vue Router, consuming TheMealDB's public API. Debounced search combines with category filtering, and each recipe opens to ingredients with measures, step-by-step instructions, and an embedded video. In-flight requests are aborted when superseded, so a slow early search can't resolve late and overwrite fresher results. Deployed as a single-page app on GitHub Pages, which has no rewrite rules — deep links survive because the build emits a 404.html fallback, verified against a server replicating Pages' exact serving semantics. Loading states are skeletons shaped like the content they replace, which took cumulative layout shift from 0.66 to 0 and Lighthouse performance from 73 to 99.",
+        "A recipe search app built on Vue 3's Composition API and Vue Router, consuming TheMealDB's public API. Debounced search combines with category filtering, and each recipe opens to ingredients, instructions, and an embedded video. Deployed as a single-page app on GitHub Pages, where deep links survive a refresh despite Pages having no rewrite rules.",
       techStack: [
         "Vue 3",
         "TypeScript",
@@ -564,7 +564,7 @@ const bigProjects = {
     {
       projectName: "Markdown Editor — Svelte 5 Live Preview",
       projectDesc:
-        "A split-pane markdown editor built on Svelte 5 runes, rendering to a syntax-highlighted preview as you type. Includes a draggable divider that is also keyboard-operable, toggling bold/italic/link shortcuts, live word and character counts, dark and light themes, and export to .md or a standalone .html file — all persisted locally. Two constraints shaped it: highlight.js's default bundle registers 190+ grammars and would have blown the 200KB budget, so thirteen languages are registered explicitly for a 54KB gzipped build; and caching highlight results by source took keystroke-to-preview latency on a 1,100-line document from a p95 of 48ms to 27ms, without resorting to a debounce that would only have deferred the work.",
+        "A split-pane markdown editor built on Svelte 5 runes, rendering a syntax-highlighted preview as you type. Includes a draggable, keyboard-operable divider, formatting shortcuts, dark and light themes, and export to .md or a standalone .html file. Ships at 54KB gzipped, holding preview latency well inside a frame on a 1,000-line document.",
       techStack: [
         "Svelte 5",
         "TypeScript",
