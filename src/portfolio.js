@@ -515,6 +515,29 @@ const bigProjects = {
         },
       ],
     },
+    {
+      projectName: "Kanban Board — Drag-and-Drop Task Board",
+      projectDesc:
+        "A five-column Kanban board built with React 19 and Tailwind 4, using dnd-kit for drag-and-drop between and within columns. Cards support inline editing and delete-with-confirm, and the board persists to localStorage behind a versioned schema whose reads fall back to a clean board rather than white-screening on a corrupt blob. Every board mutation is a pure function over an immutable board, so the move and reorder logic is covered by unit tests directly instead of by simulating drags. Drag-and-drop is fully keyboard-operable with screen-reader announcements, and collision detection is pointer-first so a card grabbed by its handle lands where the cursor is rather than a column to the right.",
+      techStack: [
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "dnd-kit",
+        "Vitest",
+        "GitHub Pages",
+      ],
+      footerLink: [
+        {
+          name: "Live",
+          url: "https://greentea524.github.io/react-kanban-board/",
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/greentea524/react-kanban-board",
+        },
+      ],
+    },
   ],
   display: true, // Set false to hide this section, defaults to true
 };
