@@ -561,6 +561,30 @@ const bigProjects = {
         },
       ],
     },
+    {
+      projectName: "Markdown Editor — Svelte 5 Live Preview",
+      projectDesc:
+        "A split-pane markdown editor built on Svelte 5 runes, rendering to a syntax-highlighted preview as you type. Includes a draggable divider that is also keyboard-operable, toggling bold/italic/link shortcuts, live word and character counts, dark and light themes, and export to .md or a standalone .html file — all persisted locally. Two constraints shaped it: highlight.js's default bundle registers 190+ grammars and would have blown the 200KB budget, so thirteen languages are registered explicitly for a 54KB gzipped build; and caching highlight results by source took keystroke-to-preview latency on a 1,100-line document from a p95 of 48ms to 27ms, without resorting to a debounce that would only have deferred the work.",
+      techStack: [
+        "Svelte 5",
+        "TypeScript",
+        "Vite",
+        "marked",
+        "highlight.js",
+        "Vitest",
+        "GitHub Pages",
+      ],
+      footerLink: [
+        {
+          name: "Live",
+          url: "https://greentea524.github.io/svelte-markdown-editor/",
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/greentea524/svelte-markdown-editor",
+        },
+      ],
+    },
   ],
   display: true, // Set false to hide this section, defaults to true
 };
