@@ -492,7 +492,29 @@ const bigProjects = {
         },
       ],
     },
-
+    {
+      projectName: "Notes — Statically-Generated Blog",
+      projectDesc:
+        "A markdown blog built with the Next.js App Router and published as a fully static export, with no server or database behind it. Posts are local .md files parsed with gray-matter; every route is generated at build time from the filenames via generateStaticParams, so adding a file adds a page. Frontmatter is validated during the build, failing loudly with the offending filename rather than rendering an empty meta tag. Each page carries its own title, description, canonical URL, and Open Graph tags. Scores 100 for performance, accessibility, best practices, and SEO on Lighthouse.",
+      techStack: [
+        "Next.js 16 (App Router)",
+        "React 19",
+        "TypeScript",
+        "remark + gray-matter",
+        "CSS Modules",
+        "GitHub Pages",
+      ],
+      footerLink: [
+        {
+          name: "Live",
+          url: "https://greentea524.github.io/nextjs-blog/",
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/greentea524/nextjs-blog",
+        },
+      ],
+    },
   ],
   display: true, // Set false to hide this section, defaults to true
 };
