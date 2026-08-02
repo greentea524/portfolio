@@ -472,7 +472,7 @@ const bigProjects = {
     {
       projectName: "Baby Tracker — Caregiver PWA",
       projectDesc:
-        "A Flutter web app (installable PWA) for logging a baby's feeds, pumping, diaper changes, and growth, with real-time sync across multiple caregivers. Highlights: an insights dashboard charting weekly and monthly trends in feeding, diapers, and pumping; a custom-painted growth chart overlaid with WHO percentile curves that reports the child's exact percentile for age; a daily timeline with feed-interval stats; US units (lb/oz, fl oz) alongside metric; CSV/PDF export for pediatrician visits; and a next-feed reminder that ignores snacks and solids, so a 10 ml top-up does not push the clock out by a whole interval. Firestore security rules are covered by an emulator-backed test suite in CI.",
+        "A Flutter web app (installable PWA) for logging a baby's feeds, pumping, diaper changes, and growth, with real-time sync across multiple caregivers. Highlights include a custom-painted growth chart overlaid with WHO percentile curves that reports the child's exact percentile for age, and CSV/PDF export for pediatrician visits.",
       techStack: [
         "Flutter Web / PWA",
         "Dart",
