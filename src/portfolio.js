@@ -22,6 +22,9 @@ import shotBoxing from "./assets/images/games/boxing.webp";
 import shotPlatformer from "./assets/images/games/platformer.webp";
 import shotLanternKeeper from "./assets/images/games/lantern-keeper.jpg";
 import shotStatic from "./assets/images/games/static.jpg";
+import shotCartCrate from "./assets/images/games/cart-crate.jpg";
+import shotPocketDungeon from "./assets/images/games/pocket-dungeon.jpg";
+import shotWindup from "./assets/images/games/windup.jpg";
 
 // Splash Screen
 
@@ -332,7 +335,7 @@ const bigProjects = {
     {
       projectName: "Retro Pad GBC Games",
       projectDesc:
-        "A handheld retro arcade featuring Game Boy Color-inspired web games with authentic 160x144 logical resolution, on-screen Retro Pad controls (D-Pad & action buttons), and custom Phaser 3 mechanics. Includes 'Lantern Keeper' — an ability-gated puzzle platformer with double jumps, dashes, and wall-clings — and 'Static' — a top-down mystery adventure featuring mirrored dual-world exploration and dialogue trees.",
+        "A handheld retro arcade bundling five Game Boy Color-inspired web games with authentic 160x144 logical resolution, on-screen Retro Pad controls (D-Pad & action buttons), and custom Phaser 3 / TypeScript engines. Highlights: 'Lantern Keeper' (ability-gated puzzle platformer), 'Static' (mirrored dual-world mystery adventure), 'Cart & Crate' (Sokoban box-pushing puzzle with palette toggles), 'Pocket Dungeon' (turn-based roguelite crawler), and 'Windup' (energy-limited platformer).",
       techStack: [
         "Phaser 3",
         "TypeScript",
@@ -352,6 +355,21 @@ const bigProjects = {
           name: "Static",
           image: shotStatic,
           url: "https://greentea524.github.io/games/static/",
+        },
+        {
+          name: "Cart & Crate",
+          image: shotCartCrate,
+          url: "https://greentea524.github.io/games/cart-crate/",
+        },
+        {
+          name: "Pocket Dungeon",
+          image: shotPocketDungeon,
+          url: "https://greentea524.github.io/games/pocket-dungeon/",
+        },
+        {
+          name: "Windup",
+          image: shotWindup,
+          url: "https://greentea524.github.io/games/windup/",
         },
       ],
       footerLink: [
