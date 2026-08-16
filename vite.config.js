@@ -41,6 +41,11 @@ function fontAwesomeWoff2Only() {
 
 export default defineConfig({
   base: "/portfolio/",
+  resolve: {
+    alias: {
+      "lottie-web": "lottie-web/build/player/lottie_light.js",
+    },
+  },
   plugins: [fontAwesomeWoff2Only(), react()],
   server: {
     open: true,

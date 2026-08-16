@@ -2,6 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
+    <!--
+      Content-Security-Policy. Kept first in <head> so it is parsed before any
+      resource request is made.
+
+      GitHub Pages cannot set response headers, hence the meta form. Note that
+      `frame-ancestors`, `report-uri` and `sandbox` are ignored in a meta tag —
+      clickjacking protection specifically is not available on this host.
+
+      script-src carries no 'unsafe-eval'. lottie-web calls direct eval to
+      evaluate After Effects expressions, so the build aliases it to
+      lottie_light (see vite.config.js), which omits the expression engine.
+
+      style-src needs 'unsafe-inline' for style *attributes*: React writes
+      `style={{…}}` inline, react-headroom positions the header that way, and
+      lottie sets inline styles on the SVG nodes it generates. This is the one
+      concession in the policy and it is not removable without rewriting those
+      three. It does not permit inline <script>.
+
+      cdnjs is image-only: react-easy-emoji renders every emoji as a remote
+      Twemoji <img>. Dropping that dependency would let img-src reduce to
+      'self' data:.
+
+      upgrade-insecure-requests is load-bearing rather than decorative here.
+      react-easy-emoji hardcodes a protocol-relative `//cdnjs…` URL, which
+      inherits the page's scheme — so it resolves to http:// whenever the page
+      is served over http, and img-src deliberately allows https only. The
+      upgrade rewrites those requests to https before they are matched, which
+      both keeps the allowlist https-only and stops emoji silently loading in
+      plaintext.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data: https://cdnjs.cloudflare.com;
+               font-src 'self';
+               connect-src 'self';
+               manifest-src 'self';
+               frame-src 'none';
+               object-src 'none';
+               base-uri 'self';
+               form-action 'self';
+               upgrade-insecure-requests"
+    />
     <link
       rel="icon"
       type="image/png"
