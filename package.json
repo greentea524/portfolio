@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "colorthief": "^3.4.0",
     "gh-pages": ">=5.0.0",
     "lottie-react": "^2.4.1",
