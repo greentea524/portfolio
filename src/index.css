@@ -8,9 +8,18 @@
 }
 @font-face {
   font-family: "Montserrat";
+  /* Subsetted to Latin (plus U+2192, the arrow in BlogCard): 240 kB TTF ->
+     32 kB WOFF2. The declared format now matches the file — it previously said
+     woff for a TrueType file, which a UA is entitled to skip.
+
+     local() stays first so anyone with Montserrat installed skips the download.
+
+     swap rather than block: this face is applied to the whole body, so block
+     held all text invisible until it arrived. At 32 kB the fallback period is
+     short, and showing the text is worth more than avoiding the reflow. */
   src: local("Montserrat"),
-    url("./assets/fonts/Montserrat-Regular.ttf") format("woff");
-  font-display: block;
+    url("./assets/fonts/Montserrat-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
