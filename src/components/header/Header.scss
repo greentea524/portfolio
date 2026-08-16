@@ -46,7 +46,7 @@
 }
 
 .header li a:hover,
-.header .menu-btn:hover {
+.header .menu-icon:hover {
   background-color: globalColor.$headerHoverBG;
 }
 
@@ -73,6 +73,11 @@
 .header .menu {
   clear: both;
   max-height: 0;
+  /* `overflow: hidden` on .header ul clips the collapsed menu but leaves its
+     links in the tab order, so keyboard focus could land on an invisible
+     target. visibility takes them out of it, and unlike display it still
+     animates alongside the max-height transition. */
+  visibility: hidden;
   transition: max-height 0.2s ease-out;
 }
 
@@ -85,6 +90,13 @@
   padding: 28px 20px;
   position: relative;
   user-select: none;
+  /* Now a <button>: strip the UA chrome so it renders as it did as a label. */
+  background: none;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .header .menu-icon .navicon {
@@ -130,30 +142,30 @@
   top: -5px;
 }
 
-/* menu btn */
+/* open state
+   Previously keyed off `.menu-btn:checked ~ …` on a hidden checkbox. The state
+   is now React's, applied as a class on .header, so these become descendant
+   selectors rather than sibling ones. */
 
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
+.header.nav-open .menu {
   max-height: 486px;
+  visibility: visible;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon {
+.header.nav-open .menu-icon .navicon {
   background: transparent !important;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
+.header.nav-open .menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
+.header.nav-open .menu-icon .navicon:after {
   transform: rotate(45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.header.nav-open .menu-icon:not(.steps) .navicon:before,
+.header.nav-open .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
@@ -170,6 +182,9 @@
   }
   .header .menu {
     max-height: none;
+    /* Desktop has no disclosure — the menu is always open, so it must be
+       visible and focusable regardless of nav-open. */
+    visibility: visible;
   }
   .header .menu-icon {
     display: none;

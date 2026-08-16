@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch.jsx";
@@ -16,6 +16,10 @@ import {
 
 function Header() {
   const { isDark } = useContext(StyleContext);
+  // The open state used to live in a CSS `:checked` selector on a hidden
+  // checkbox. That cannot report itself: `aria-expanded` has to be rendered
+  // from a value React knows, so the state moves here and CSS reads a class.
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const viewExperience = workExperiences.display;
   const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
@@ -26,27 +30,39 @@ function Header() {
 
   return (
     <Headroom>
-      <header className={isDark ? "dark-menu header" : "header"}>
+      <header
+        className={[
+          isDark ? "dark-menu header" : "header",
+          isNavOpen ? "nav-open" : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+      >
         <a href="/" className="logo">
           <span className="grey-color"> &lt;</span>
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
         </a>
-        <input
-          className="menu-btn"
-          type="checkbox"
-          id="menu-btn"
-          aria-label="Toggle navigation menu"
-        />
-        <label
+        {/*
+          A real button, not the previous checkbox-and-label pair. That
+          checkbox was `display: none`, so it was neither focusable nor in the
+          accessibility tree — its aria-label announced to nobody, and the
+          menu could not be opened by keyboard at all.
+        */}
+        <button
+          type="button"
           className="menu-icon"
-          htmlFor="menu-btn"
-          style={{ color: "white" }}
-          aria-label="Toggle navigation menu"
+          aria-label="Navigation menu"
+          aria-expanded={isNavOpen}
+          aria-controls="main-menu"
+          onClick={() => setIsNavOpen((open) => !open)}
         >
-          <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
-        </label>
-        <ul className={isDark ? "dark-menu menu" : "menu"}>
+          <span
+            className={isDark ? "navicon navicon-dark" : "navicon"}
+            aria-hidden="true"
+          ></span>
+        </button>
+        <ul id="main-menu" className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
               <a href="#skills">Skills</a>
