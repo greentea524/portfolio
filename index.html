@@ -2,6 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
+    <!--
+      Content-Security-Policy. Kept first in <head> so it is parsed before any
+      resource request is made.
+
+      GitHub Pages cannot set response headers, hence the meta form. Note that
+      `frame-ancestors`, `report-uri` and `sandbox` are ignored in a meta tag —
+      clickjacking protection specifically is not available on this host.
+
+      script-src carries no 'unsafe-eval'. lottie-web calls direct eval to
+      evaluate After Effects expressions, so the build aliases it to
+      lottie_light (see vite.config.js), which omits the expression engine.
+
+      style-src needs 'unsafe-inline' for style *attributes*: React writes
+      `style={{…}}` inline, react-headroom positions the header that way, and
+      lottie sets inline styles on the SVG nodes it generates. This is the one
+      concession in the policy and it is not removable without rewriting those
+      three. It does not permit inline <script>.
+
+      cdnjs is image-only: react-easy-emoji renders every emoji as a remote
+      Twemoji <img>. Dropping that dependency would let img-src reduce to
+      'self' data:.
+
+      upgrade-insecure-requests is load-bearing rather than decorative here.
+      react-easy-emoji hardcodes a protocol-relative `//cdnjs…` URL, which
+      inherits the page's scheme — so it resolves to http:// whenever the page
+      is served over http, and img-src deliberately allows https only. The
+      upgrade rewrites those requests to https before they are matched, which
+      both keeps the allowlist https-only and stops emoji silently loading in
+      plaintext.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data: https://cdnjs.cloudflare.com;
+               font-src 'self';
+               connect-src 'self';
+               manifest-src 'self';
+               frame-src 'none';
+               object-src 'none';
+               base-uri 'self';
+               form-action 'self';
+               upgrade-insecure-requests"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -25,21 +71,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#6c63ff" />
     <meta
-      name="Saad Pasta Portfolio"
-      content="Web site created using create-react-app"
+      name="description"
+      content="David Phong — Full Stack Developer. React, JavaScript, Node and modern frontend/backend work, with projects, games and experience."
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="/portfolio/apple-touch-icon.png?v8=qAJ44G5Bm7"
     />
-    <meta property="og:title" content="David Portfolio" />
+
+    <!--
+      Absolute URLs are required here: crawlers do not resolve relative paths,
+      and these are read from the served page rather than fetched by the browser,
+      so Vite's base rewriting does not apply.
+    -->
+    <meta property="og:title" content="David Phong — Full Stack Developer" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://developerfolio.js.org/" />
+    <meta
+      property="og:url"
+      content="https://greentea524.github.io/portfolio/"
+    />
+    <meta
+      property="og:description"
+      content="Full Stack Developer. React, JavaScript, Node and modern frontend/backend work, with projects, games and experience."
+    />
     <meta
       property="og:image"
-      content="https://developerfolio.js.org/static/media/developerActivity.59389695.svg"
+      content="https://greentea524.github.io/portfolio/og-image.jpg"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="David Phong's portfolio homepage"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -48,10 +114,10 @@
     <link rel="manifest" href="/portfolio/manifest.json" />
 
     <title>My Portfolio 🚀</title>
-    <script type="module" crossorigin src="/portfolio/assets/index-Zs2dzAwA.js"></script>
+    <script type="module" crossorigin src="/portfolio/assets/index-DnzdnjxD.js"></script>
     <link rel="modulepreload" crossorigin href="/portfolio/assets/rolldown-runtime-CNC7AqOf.js">
-    <link rel="modulepreload" crossorigin href="/portfolio/assets/vendor-lottie-BfV0P-kI.js">
-    <link rel="modulepreload" crossorigin href="/portfolio/assets/vendor-react-Bsr-idNi.js">
+    <link rel="modulepreload" crossorigin href="/portfolio/assets/vendor-lottie-gU1dhAS-.js">
+    <link rel="modulepreload" crossorigin href="/portfolio/assets/vendor-react-CVjW7Tgo.js">
     <link rel="modulepreload" crossorigin href="/portfolio/assets/lottie-animations-CAzi77Dv.js">
     <link rel="stylesheet" crossorigin href="/portfolio/assets/index-3c1TYo5m.css">
   </head>
