@@ -20,11 +20,11 @@ import shotInvasion from "./assets/images/games/invasion.webp";
 import shotPacman from "./assets/images/games/pacman.webp";
 import shotBoxing from "./assets/images/games/boxing.webp";
 import shotPlatformer from "./assets/images/games/platformer.webp";
-import shotLanternKeeper from "./assets/images/games/lantern-keeper.jpg";
-import shotStatic from "./assets/images/games/static.jpg";
-import shotCartCrate from "./assets/images/games/cart-crate.jpg";
-import shotPocketDungeon from "./assets/images/games/pocket-dungeon.jpg";
-import shotWindup from "./assets/images/games/windup.jpg";
+import shotLanternKeeper from "./assets/images/games/lantern-keeper.webp";
+import shotStatic from "./assets/images/games/static.webp";
+import shotCartCrate from "./assets/images/games/cart-crate.webp";
+import shotPocketDungeon from "./assets/images/games/pocket-dungeon.webp";
+import shotWindup from "./assets/images/games/windup.webp";
 
 // Splash Screen
 
