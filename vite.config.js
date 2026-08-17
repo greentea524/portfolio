@@ -50,6 +50,14 @@ export default defineConfig({
   server: {
     open: true,
   },
+  test: {
+    environment: "jsdom",
+    setupFiles: ["./src/test-setup.js"],
+    // The component tree pulls in .scss and image imports; letting Vite process
+    // them for real is what makes the smoke test meaningful rather than a test
+    // of a pile of mocks.
+    include: ["src/**/*.{test,spec}.{js,jsx}"],
+  },
   build: {
     outDir: "build",
     rollupOptions: {
