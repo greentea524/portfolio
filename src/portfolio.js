@@ -20,11 +20,20 @@ import shotInvasion from "./assets/images/games/invasion.webp";
 import shotPacman from "./assets/images/games/pacman.webp";
 import shotBoxing from "./assets/images/games/boxing.webp";
 import shotPlatformer from "./assets/images/games/platformer.webp";
+// Screenshots of Retro Pad GBC games
 import shotLanternKeeper from "./assets/images/games/lantern-keeper.webp";
 import shotStatic from "./assets/images/games/static.webp";
 import shotCartCrate from "./assets/images/games/cart-crate.webp";
 import shotPocketDungeon from "./assets/images/games/pocket-dungeon.webp";
 import shotWindup from "./assets/images/games/windup.webp";
+
+// Screenshots of 3D games (Three.js + Cannon-es)
+import shotTowerStacker from "./assets/images/games/tower-stacker.webp";
+import shotMinigolf from "./assets/images/games/minigolf.webp";
+import shotVoxelDigger from "./assets/images/games/voxel-digger.webp";
+import shotAnomalyRoom from "./assets/images/games/anomaly-room.webp";
+import shotTiltMaze from "./assets/images/games/tilt-maze.webp";
+import shotTubeRunner from "./assets/images/games/tube-runner.webp";
 
 // Splash Screen
 
@@ -89,7 +98,7 @@ const skillsSection = {
       "⚡ Build real-time computer vision apps with Python, OpenCV, and MediaPipe — hand, gesture, and eye tracking",
     ),
     emoji(
-      "⚡ Create interactive browser games and real-time multiplayer experiences with HTML5 Canvas and WebSockets",
+      "⚡ Create interactive 2D & 3D browser games and simulations with Three.js, Cannon-es physics, Phaser 3, and HTML5 Canvas",
     ),
     // emoji(
     //   "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
@@ -370,6 +379,61 @@ const bigProjects = {
           name: "Windup",
           image: shotWindup,
           url: "https://greentea524.github.io/games/windup/",
+        },
+      ],
+      footerLink: [
+        {
+          name: "Arcade Hub",
+          url: "https://greentea524.github.io/games/",
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/greentea524/games",
+        },
+      ],
+    },
+    {
+      projectName: "3D Web Games (Three.js & Physics)",
+      projectDesc:
+        "A suite of six interactive 3D browser games built with Three.js, Cannon-es rigid-body physics, and TypeScript. Highlights include 'Tower Stacker' (timed slicing physics and isometric climbing), 'Minigolf' (slingshot aim with rolling resistance and multi-tier slope physics), 'Voxel Digger' (interactive 3D block excavation), 'Anomaly Room' (first-person spot-the-difference with frustum and shadow culling), 'Tilt Maze' (marble gravity simulation across eight labyrinths), and 'Tube Runner' (360-degree cylindrical speed runner).",
+      techStack: [
+        "Three.js",
+        "Cannon-es",
+        "TypeScript",
+        "WebGL",
+        "Vite",
+        "GitHub Pages",
+      ],
+      gallery: [
+        {
+          name: "Tower Stacker",
+          image: shotTowerStacker,
+          url: "https://greentea524.github.io/games/tower-stacker/",
+        },
+        {
+          name: "Minigolf",
+          image: shotMinigolf,
+          url: "https://greentea524.github.io/games/minigolf/",
+        },
+        {
+          name: "Voxel Digger",
+          image: shotVoxelDigger,
+          url: "https://greentea524.github.io/games/voxel-digger/",
+        },
+        {
+          name: "Anomaly Room",
+          image: shotAnomalyRoom,
+          url: "https://greentea524.github.io/games/anomaly-room/",
+        },
+        {
+          name: "Tilt Maze",
+          image: shotTiltMaze,
+          url: "https://greentea524.github.io/games/tilt-maze/",
+        },
+        {
+          name: "Tube Runner",
+          image: shotTubeRunner,
+          url: "https://greentea524.github.io/games/tube-runner/",
         },
       ],
       footerLink: [
