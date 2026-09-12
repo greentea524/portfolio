@@ -20,7 +20,7 @@ function Header() {
   // checkbox. That cannot report itself: `aria-expanded` has to be rendered
   // from a value React knows, so the state moves here and CSS reads a class.
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("skills");
 
   const navItems = [
     skillsSection.display && { id: "skills", label: "Skills" },
@@ -34,9 +34,34 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
+      const scrollY = window.scrollY || window.pageYOffset || 0;
+      const firstItem = navItems[0]?.id || "skills";
+
+      // If at or near the top of the page, default to skills
+      if (scrollY < 100) {
+        setActiveSection(firstItem);
+        return;
+      }
+
+      // If scrolled close to the bottom of the page (and actually scrolled down past 300px),
+      // highlight the last visible section
+      if (
+        scrollY > 300 &&
+        window.innerHeight + Math.round(scrollY) >=
+          document.documentElement.scrollHeight - 60
+      ) {
+        const lastVisible = [...navItems]
+          .reverse()
+          .find((item) => document.getElementById(item.id));
+        if (lastVisible) {
+          setActiveSection(lastVisible.id);
+          return;
+        }
+      }
+
       // Find the section currently in view. A reading offset of 140px accounts for the pinned header.
       const readingOffset = 140;
-      let current = "";
+      let current = firstItem;
 
       for (const item of navItems) {
         const el = document.getElementById(item.id);
@@ -46,19 +71,6 @@ function Header() {
             current = item.id;
             break;
           }
-        }
-      }
-
-      // If scrolled close to the bottom of the page, highlight the last visible item
-      if (
-        window.innerHeight + Math.round(window.scrollY) >=
-        document.documentElement.scrollHeight - 60
-      ) {
-        const lastVisible = [...navItems]
-          .reverse()
-          .find((item) => document.getElementById(item.id));
-        if (lastVisible) {
-          current = lastVisible.id;
         }
       }
 
