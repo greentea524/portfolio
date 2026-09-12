@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch.jsx";
@@ -20,13 +20,56 @@ function Header() {
   // checkbox. That cannot report itself: `aria-expanded` has to be rendered
   // from a value React knows, so the state moves here and CSS reads a class.
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const viewExperience = workExperiences.display;
-  const viewOpenSource = openSource.display;
-  const viewSkills = skillsSection.display;
-  const viewProjects = bigProjects.display;
-  const viewAchievement = achievementSection.display;
-  const viewBlog = blogSection.display;
-  const viewTalks = talkSection.display;
+  const [activeSection, setActiveSection] = useState("");
+
+  const navItems = [
+    skillsSection.display && { id: "skills", label: "Skills" },
+    workExperiences.display && { id: "experience", label: "Work Experiences" },
+    bigProjects.display && { id: "projects", label: "Projects" },
+    openSource.display && { id: "opensource", label: "Open Source" },
+    achievementSection.display && { id: "achievements", label: "Achievements" },
+    blogSection.display && { id: "blogs", label: "Blogs" },
+    talkSection.display && { id: "talks", label: "Talks" },
+  ].filter(Boolean);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Find the section currently in view. A reading offset of 140px accounts for the pinned header.
+      const readingOffset = 140;
+      let current = "";
+
+      for (const item of navItems) {
+        const el = document.getElementById(item.id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= readingOffset && rect.bottom > readingOffset) {
+            current = item.id;
+            break;
+          }
+        }
+      }
+
+      // If scrolled close to the bottom of the page, highlight the last visible item
+      if (
+        window.innerHeight + Math.round(window.scrollY) >=
+        document.documentElement.scrollHeight - 60
+      ) {
+        const lastVisible = [...navItems]
+          .reverse()
+          .find((item) => document.getElementById(item.id));
+        if (lastVisible) {
+          current = lastVisible.id;
+        }
+      }
+
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Headroom pin={true}>
@@ -71,41 +114,17 @@ function Header() {
             }
           }}
         >
-          {viewSkills && (
-            <li>
-              <a href="#skills">Skills</a>
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <a
+                href={`#${item.id}`}
+                className={activeSection === item.id ? "active" : ""}
+                aria-current={activeSection === item.id ? "true" : undefined}
+              >
+                {item.label}
+              </a>
             </li>
-          )}
-          {viewExperience && (
-            <li>
-              <a href="#experience">Work Experiences</a>
-            </li>
-          )}
-          {viewProjects && (
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-          )}
-          {viewOpenSource && (
-            <li>
-              <a href="#opensource">Open Source</a>
-            </li>
-          )}
-          {viewAchievement && (
-            <li>
-              <a href="#achievements">Achievements</a>
-            </li>
-          )}
-          {viewBlog && (
-            <li>
-              <a href="#blogs">Blogs</a>
-            </li>
-          )}
-          {viewTalks && (
-            <li>
-              <a href="#talks">Talks</a>
-            </li>
-          )}
+          ))}
         </ul>
         <ToggleSwitch />
       </header>
