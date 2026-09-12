@@ -25,6 +25,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+html {
+  scroll-padding-top: 80px;
+}
 html,
 body {
   scroll-behavior: smooth;

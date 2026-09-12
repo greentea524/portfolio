@@ -29,7 +29,7 @@ function Header() {
   const viewTalks = talkSection.display;
 
   return (
-    <Headroom>
+    <Headroom pin={true}>
       <header
         className={[
           isDark ? "dark-menu header" : "header",
@@ -62,7 +62,15 @@ function Header() {
             aria-hidden="true"
           ></span>
         </button>
-        <ul id="main-menu" className={isDark ? "dark-menu menu" : "menu"}>
+        <ul
+          id="main-menu"
+          className={isDark ? "dark-menu menu" : "menu"}
+          onClick={(e) => {
+            if (e.target.closest("a")) {
+              setIsNavOpen(false);
+            }
+          }}
+        >
           {viewSkills && (
             <li>
               <a href="#skills">Skills</a>

@@ -1,6 +1,9 @@
 @use "../../_globalColor";
 
 /*React-headroom*/
+.headroom {
+  z-index: 100 !important;
+}
 .headroom-wrapper {
   max-height: 100px;
 }
